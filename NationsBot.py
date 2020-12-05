@@ -1,5 +1,5 @@
 import discord
-import os
+import os, json
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = "n.")
@@ -28,5 +28,7 @@ for filename in os.listdir("./cogs"):
 #Loads the GameCogs file for running Games.
 client.load_extension(f"ConcertOfNationsCogs.GameCogs")
     
-    
-client.run("NTQ5MjY0MTgyNDA3NzI1MDk4.XHLEIQ.Gi-VksnAE6QYgJ66qqD62EsqAiU")
+with open("privateCreds.json") as f: #Loads the map made earlier
+    creds = json.load(f)
+
+client.run(creds["Token"])

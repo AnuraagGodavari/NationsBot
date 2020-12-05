@@ -447,7 +447,7 @@ class NationsCog(commands.Cog):
             if ("Stack" not in playerStatuses[str(ctx.author.id)]):
                 playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
             
-            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.fleets:{optionalArg}", "Pages": pages, "Page": optionalArg})y
+            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.fleets:{optionalArg}", "Pages": pages, "Page": optionalArg})
 
     #If the player is on a menu with multiple pages, this turns to the requested page number.
     @commands.command()
