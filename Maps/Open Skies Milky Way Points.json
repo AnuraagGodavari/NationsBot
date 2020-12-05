@@ -1,0 +1,191 @@
+{
+	"Territories": {
+		"Magadha System": {
+			"Magadha Star": {
+				"Coordinates": [350, 200],
+				"Type": "SeaTerritory",
+				"System": "Magadha",
+				"Terrain": "Star"
+			},
+			"Magadha I": {
+				"Coordinates": [350, 200],
+				"Type": "LandTerritory",
+				"System": "Magadha",
+				"Terrain": "Venusian"
+			},
+			"Magadha II": {
+				"Coordinates": [350, 200],
+				"Type": "LandTerritory",
+				"System": "Magadha",
+				"Terrain": "Venusian"
+			},
+			"Magadha III": {
+				"Coordinates": [350, 200],
+				"Type": "HabitableTerritory",
+				"System": "Magadha",
+				"Terrain": "Tropical"
+			},
+			"Magadha IV": {
+				"Coordinates": [350, 200],
+				"Type": "Habitable Territory",
+				"System": "Magadha",
+				"Terrain": "Temperate"
+			},
+			"Magadha V": {
+				"Coordinates": [350, 200],
+				"Type": "HabitableTerritory",
+				"System": "Magadha",
+				"Terrain": "Cold"
+			},
+			"Magadha VI": {
+				"Coordinates": [350, 200],
+				"Type": "LandTerritory",
+				"System": "Magadha",
+				"Terrain": "Martian"
+			},
+			"Magadha VII": {
+				"Coordinates": [350, 200],
+				"Type": "OtherTerritory",
+				"System": "Magadha",
+				"Terrain": "Gaseous"
+			},
+			"Magadha VIII": {
+				"Coordinates": [350, 200],
+				"Type": "OtherTerritory",
+				"System": "Magadha",
+				"Terrain": "Gaseous"
+			}
+		},
+		
+		"Neues Rheinland System": {
+			"Neues Rheinland Star": {
+				"Coordinates": [135,150],
+				"Type": "SeaTerritory",
+				"System": "Neues Rheinland",
+				"Terrain": "Star"
+			},
+			
+			"Neues Rheinland I": {
+				"Coordinates": [135,150],
+				"Type": "LandTerritory",
+				"System": "Neues Rheinland",
+				"Terrain": "Venusian"
+			},
+			
+			"Neues Rheinland II": {
+				"Coordinates": [135,150],
+				"Type": "HabitableTerritory",
+				"System": "Neues Rheinland",
+				"Terrain": "Grassland"
+			},
+			
+			"Neues Rheinland III": {
+				"Coordinates": [135,150],
+				"Type": "HabitableTerritory",
+				"System": "Neues Rheinland",
+				"Terrain": "Temperate"
+			},
+			
+			"Neues Rheinland IV": {
+				"Coordinates": [135,150],
+				"Type": "HabitableTerritory",
+				"System": "Neues Rheinland",
+				"Terrain": "Alpine"
+			},
+			
+			"Neues Rheinland V": {
+				"Coordinates": [135,150],
+				"Type": "LandTerritory",
+				"System": "Neues Rheinland",
+				"Terrain": "Martian"
+			},
+			
+			"Neues Rheinland VI": {
+				"Coordinates": [135,150],
+				"Type": "OtherTerritory",
+				"System": "Neues Rheinland",
+				"Terrain": "Gaseous"
+			}
+		},
+		
+		"Parushokun System" : {
+			"Parushokun Star": {
+				"Coordinates": [170,100],
+				"Type": "SeaTerritory",
+				"System": "Parushokun",
+				"Terrain": "Star"
+			},
+			
+			"Parushokun I": {
+				"Coordinates": [170,100],
+				"Type": "HabitableTerritory",
+				"System": "Parushokun",
+				"Terrain": "Hilly"
+			},
+			
+			"Parushokun II": {
+				"Coordinates": [170,100],
+				"Type": "HabitableTerritory",
+				"System": "Parushokun",
+				"Terrain": "Alpine"
+			},
+			
+			"Parushokun III": {
+				"Coordinates": [170,100],
+				"Type": "HabitableTerritory",
+				"System": "Parushokun",
+				"Terrain": "Uralic"
+			},
+			
+			"Parushokun IV": {
+				"Coordinates": [170,100],
+				"Type": "LandTerritory",
+				"System": "Parushokun",
+				"Terrain": "Martian"
+			},
+			
+			"Parushokun V": {
+				"Coordinates": [170,100],
+				"Type": "OtherTerritory",
+				"System": "Parushokun",
+				"Terrain": "Gaseous"
+			}
+		},
+		
+		"Victoria System" : {
+			"Victoria Star": {
+				"Coordinates": [70, 215],
+				"Type": "SeaTerritory",
+				"System": "Victoria",
+				"Terrain": "Star"
+			}
+		},
+		
+		"Labourdonais System" : {
+			"Labourdonais Star": {
+				"Coordinates": [55, 120],
+				"Type": "SeaTerritory",
+				"System": "Labourdonais",
+				"Terrain": "Star"
+			}
+		},
+		
+		"Shahrazad System" : {
+			"Shahrazad Star": {
+				"Coordinates": [100,75],
+				"Type": "SeaTerritory",
+				"System": "Shahrazad",
+				"Terrain": "Star"
+			}
+		},
+		
+		"Nevsky System" : {
+			"Nevsky Star": {
+				"Coordinates": [175, 160],
+				"Type": "SeaTerritory",
+				"System": "Nevsky",
+				"Terrain": "Star"
+			}
+		}
+	}
+}

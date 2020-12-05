@@ -1,0 +1,432 @@
+{
+	"Game Objects": {
+		"Buildings": {
+			"TestBarracks": {
+				"__class__": "Building",
+				"__module__": "ConcertOfNations.GameObjects",
+				"name": "TestBarracks",
+				"buildingCosts": {
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": {
+						"Money": 0
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 0
+				},
+				"Revenue": {
+					"Iron": 0
+				},
+				"category": "Military",
+				"Completion Effects": {
+					"Nation": {
+						"National": {
+							"Cumulative": {
+								"Military Capacity": 1
+							},
+							"Exponential": {
+								"Army Cost": 0.05
+							}
+						}
+					},
+					"Territory": {
+						"Territorial": {
+							"Cumulative": {
+								"Supply": 10
+							},
+							"Exponential": {}
+						}
+					}
+				},
+				"territoryRequirements": {
+					"type": "LandTerritory"
+				},
+				"buildTime": 12
+			},
+			
+			"TestTradeCompany": {
+				"__class__": "Building",
+				"__module__": "ConcertOfNations.GameObjects",
+				"name": "TestTradeCompany",
+				"buildingCosts": {
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": {
+						"Money": 5000
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 1000
+				},
+				"Revenue": {
+					"Iron": 0
+				},
+				"category": "Infrastructure",
+				"Completion Effects": {
+					"Nation": {
+						"National": {
+							"Cumulative": {
+								"Colonial Capacity": 1
+							},
+							"Exponential": {
+								"Fleet Cost": 0.05
+							}
+						}
+					},
+					"Territory": {
+						"Territorial": {
+							"Cumulative": {
+								"Supply": 10
+							},
+							"Exponential": {}
+						}
+					}
+				},
+				"territoryRequirements": {
+					"type": "LandTerritory"
+				},
+				"buildTime": 12
+			},
+			
+			"TestMoneyHole": {
+				"__class__": "Building",
+				"__module__": "ConcertOfNations.GameObjects",
+				"name": "TestMoneyHole",
+				"buildingCosts": {
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": {
+						"Money": 500
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 50000
+				},
+				"Revenue": {},
+				"category": "Military",
+				"Completion Effects": {
+					"Nation": {
+						"National": {
+							"Cumulative": {
+							},
+							"Exponential": {
+								"Money Income": 1
+							}
+						}
+					},
+					"Territory": {
+						"Territorial": {
+							"Cumulative": {},
+							"Exponential": {}
+						}
+					}
+				},
+				"territoryRequirements": {
+					"type": "LandTerritory"
+				},
+				"buildTime": 12
+			}
+		},
+		
+		"ColonialBuildings": {
+			"TestColonialGranary": {
+				"__class__": "ColonialBuilding",
+				"__module__": "ConcertOfNations.GameObjects",
+				"name": "TestColonialGranary",
+				"colonialProgressValue": 20,
+				"convertsTo": null,
+				"buildingCosts": {
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": {
+						"Money": 0
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 0
+				},
+				"Revenue": {
+					"Iron": 0
+				},
+				"category": "Military",
+				"Completion Effects": {
+					"Nation": {
+						"National": {
+							"Cumulative": {},
+							"Exponential": {}
+						}
+					},
+					"Territory": {
+						"Territorial": {
+							"Cumulative": {
+								"Supply": 10
+							},
+							"Exponential": {}
+						}
+					}
+				},
+				"territoryRequirements": {
+					"type": "LandTerritory"
+				},
+				"buildTime": 12
+			}
+		},
+		
+		"Divisions": {
+			"TestInfantry" : {
+				"__class__": "Division",
+				"__module__": "ConcertOfNations.GameObjects",
+				"name": "TestInfantry",
+				"type": "Infantry",
+				"buildingCosts": {
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": {
+						"Money": 100
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 0.1
+				},
+				"attack": 2,
+				"defense": 2,
+				"speed": 750,
+				"territoryRequirements": {
+					"type": "LandTerritory"
+				},
+				"category": "Military",
+				"buildTime": 6,
+				"weight": 1
+			},
+
+			"TestTank" : {
+				"__class__": "Division",
+				"__module__": "ConcertOfNations.GameObjects",
+				"name": "TestTank",
+				"type": "Cavalry",
+				"buildingCosts": {
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": {
+						"Money": 100
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 0.1,
+					"Iron": 1
+				},
+				"attack": 2,
+				"defense": 2,
+				"speed": 750,
+				"territoryRequirements": {
+					"type": "LandTerritory"
+				},
+				"category": "Military",
+				"buildTime": 6,
+				"weight": 10
+			},
+			
+			"TestCavalry" : {
+				"__class__": "Division",
+				"__module__": "ConcertOfNations.GameObjects",
+				"name": "TestCavalry",
+				"type": "Cavalry",
+				"buildingCosts": {
+					"techRequirement": null,
+					"resourceCosts": {
+						"Money": 100
+					},
+					"size": 5
+				},
+				"Maintenance Costs": {
+					"Money": 0.1
+				},
+				"attack": 1,
+				"defense": 1,
+				"speed": 1250,
+				"territoryRequirements": {
+					"type": "LandTerritory"
+				},
+				"category": "Military",
+				"buildTime": 6,
+				"weight": 1
+			}, 
+			
+			"TestArtillery" : {
+				"__class__": "Division",
+				"__module__": "ConcertOfNations.GameObjects",
+				"name": "TestArtillery",
+				"type": "Artillery",
+				"buildingCosts": {
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": {
+						"Money": 100
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 0.1
+				},
+				"attack": 4,
+				"defense": 0,
+				"speed": 250,
+				"resourceCosts": null,
+				"territoryRequirements": {
+					"type": "LandTerritory"
+				},
+				"category": "Military",
+				"buildTime": 6,
+				"weight": 10
+			}
+		},
+		
+		"Ships": {
+			"TestHeavyShip": {
+				"__class__": "Ship",
+				"__module__": "ConcertOfNations.GameObjects",
+				"buildingCosts": {
+					"size": 5,
+					"techRequirement": null,
+					"manpowerCost": 500,
+					"resourceCosts": {
+						"Money": 500
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 30,
+					"Steel": 1
+				},
+				"category": "Naval",
+				"buildTime": 6,
+				"name": "TestHeavyShip",
+				"hullSize": 200,
+				"guns": 100,
+				"speed": 50,
+				"gunPower": 2,
+				"transportCapacity": 0,
+				"territoryRequirements": {
+					"type": "SeaTerritory",
+					"Coastal": true
+				}
+			},
+			
+			"TestMediumShip": {
+				"__class__": "Ship",
+				"__module__": "ConcertOfNations.GameObjects",
+				"buildingCosts": {
+					"size": 2,
+					"techRequirement": null,
+					"manpowerCost": 500,
+					"resourceCosts": {
+						"Money": 250
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 20
+				},
+				"category": "Naval",
+				"buildTime": 6,
+				"name": "TestMediumShip",
+				"hullSize": 100,
+				"guns": 50,
+				"speed": 75,
+				"gunPower": 2,
+				"transportCapacity": 0,
+				"territoryRequirements": {
+					"type": "SeaTerritory",
+					"Coastal": true
+				}
+			},
+			
+			"TestLightShip": {
+				"__class__": "Ship",
+				"__module__": "ConcertOfNations.GameObjects",
+				"buildingCosts": {
+					"size": 1,
+					"techRequirement": null,
+					"manpowerCost": 100,
+					"resourceCosts": {
+						"Money": 100
+					}
+				},
+				"Maintenance Costs": {
+					"Money": 10
+				},
+				"category": "Naval",
+				"buildTime": 6,
+				"name": "TestLightShip",
+				"hullSize": 40,
+				"guns": 50,
+				"speed": 100,
+				"gunPower": 2,
+				"transportCapacity": 1,
+				"territoryRequirements": {
+					"type": "SeaTerritory",
+					"Coastal": true
+				}
+			}
+		}
+	},
+	
+	"Basic Resources": {
+		"Money": 5000,
+		"Iron": 0,
+		"Food": 0,
+		"Coal": 0
+	},
+	
+	"Manufactured Resources": {
+		"Steel": 0,
+		"Machine Parts": 0
+	},
+	
+	"Demographic Data": {
+		"Upper Class": {
+			"Revenue Modifier": 1
+		},
+		
+		"Middle Class": {
+			"Revenue Modifier": 0.75
+		},
+		
+		"Lower Class": {
+			"Revenue Modifier": 0.5
+		}
+	},
+	
+	"Terrain Data": {
+		"Flat": 1,
+		"Temperate Ocean": 1
+	},
+	
+	"Development Levels": {
+		"Primitive": 1,
+		"Feudal": 2,
+		"Late Feudal": 5,
+		"Pre-Industrial": 10,
+		"Early Industrial": 20,
+		"Late Industrial": 30,
+		"Diesel Age": 40,
+		"Oil Age": 60,
+		"Nuclear Age": 100
+	},
+		
+	"Plurals": {
+		"Army": "Armies",
+		"Fleet": "Fleets"
+	},
+	
+	"Policy Types": [
+		"Tradition",
+		"Reform",
+		"Law",
+		"Emergency"
+	],
+	
+	"Project Categories": [
+		"Economic", "Military", "Naval", "Industrial", "Governance", "Infrastructural"
+	],
+		
+	"Ship Power Order": ["Ship of the Line", "Frigate", "Sloop"]
+}

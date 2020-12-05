@@ -1,0 +1,1529 @@
+{
+    "__class__": "Map",
+    "__module__": "ConcertOfNations.Mapping",
+    "vertices": {
+        "Territory (7,52)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (7,52)",
+            "coords": [
+                7,
+                52
+            ],
+            "edges": {
+                "Territory (24,59)": 18.384776310850235,
+                "Territory (32,34)": 30.805843601498726
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (9,20)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (9,20)",
+            "coords": [
+                9,
+                20
+            ],
+            "edges": {
+                "Territory (28,6)": 23.600847442411894,
+                "Territory (30,28)": 22.47220505424423,
+                "Territory (32,34)": 26.92582403567252
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (19,82)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (19,82)",
+            "coords": [
+                19,
+                82
+            ],
+            "edges": {
+                "Territory (24,59)": 23.53720459187964,
+                "Territory (37,105)": 29.206163733020468,
+                "Territory (47,79)": 28.160255680657446
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (24,59)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (24,59)",
+            "coords": [
+                24,
+                59
+            ],
+            "edges": {
+                "Territory (7,52)": 18.384776310850235,
+                "Territory (19,82)": 23.53720459187964,
+                "Territory (30,28)": 31.575306807693888,
+                "Territory (32,34)": 26.248809496813376,
+                "Territory (39,36)": 27.459060435491963,
+                "Territory (40,48)": 19.4164878389476,
+                "Territory (46,44)": 26.627053911388696,
+                "Territory (47,79)": 30.479501308256342
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (28,6)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (28,6)",
+            "coords": [
+                28,
+                6
+            ],
+            "edges": {
+                "Territory (9,20)": 23.600847442411894,
+                "Territory (30,28)": 22.090722034374522,
+                "Territory (32,34)": 28.284271247461902,
+                "Territory (44,24)": 24.08318915758459,
+                "Territory (57,6)": 29.0
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (30,28)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (30,28)",
+            "coords": [
+                30,
+                28
+            ],
+            "edges": {
+                "Territory (9,20)": 22.47220505424423,
+                "Territory (24,59)": 31.575306807693888,
+                "Territory (28,6)": 22.090722034374522,
+                "Territory (32,34)": 6.324555320336759,
+                "Territory (39,36)": 12.041594578792296,
+                "Territory (44,24)": 14.560219778561036
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (32,34)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (32,34)",
+            "coords": [
+                32,
+                34
+            ],
+            "edges": {
+                "Territory (7,52)": 30.805843601498726,
+                "Territory (9,20)": 26.92582403567252,
+                "Territory (24,59)": 26.248809496813376,
+                "Territory (28,6)": 28.284271247461902,
+                "Territory (30,28)": 6.324555320336759,
+                "Territory (39,36)": 7.280109889280518,
+                "Territory (40,48)": 16.1245154965971,
+                "Territory (44,24)": 15.620499351813308,
+                "Territory (46,44)": 17.204650534085253
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (37,105)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (37,105)",
+            "coords": [
+                37,
+                105
+            ],
+            "edges": {
+                "Territory (19,82)": 29.206163733020468,
+                "Territory (47,79)": 27.85677655436824,
+                "Territory (61,114)": 25.632011235952593
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (39,36)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (39,36)",
+            "coords": [
+                39,
+                36
+            ],
+            "edges": {
+                "Territory (24,59)": 27.459060435491963,
+                "Territory (30,28)": 12.041594578792296,
+                "Territory (32,34)": 7.280109889280518,
+                "Territory (40,48)": 12.041594578792296,
+                "Territory (44,24)": 13.0,
+                "Territory (46,44)": 10.63014581273465,
+                "Territory (56,35)": 17.029386365926403
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (40,48)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (40,48)",
+            "coords": [
+                40,
+                48
+            ],
+            "edges": {
+                "Territory (24,59)": 19.4164878389476,
+                "Territory (32,34)": 16.1245154965971,
+                "Territory (39,36)": 12.041594578792296,
+                "Territory (46,44)": 7.211102550927978
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (44,24)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (44,24)",
+            "coords": [
+                44,
+                24
+            ],
+            "edges": {
+                "Territory (28,6)": 24.08318915758459,
+                "Territory (30,28)": 14.560219778561036,
+                "Territory (32,34)": 15.620499351813308,
+                "Territory (39,36)": 13.0,
+                "Territory (56,35)": 16.278820596099706,
+                "Territory (57,6)": 22.20360331117452,
+                "Territory (58,26)": 14.142135623730951
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (46,44)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (46,44)",
+            "coords": [
+                46,
+                44
+            ],
+            "edges": {
+                "Territory (24,59)": 26.627053911388696,
+                "Territory (32,34)": 17.204650534085253,
+                "Territory (39,36)": 10.63014581273465,
+                "Territory (40,48)": 7.211102550927978,
+                "Territory (56,35)": 13.45362404707371
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (47,79)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (47,79)",
+            "coords": [
+                47,
+                79
+            ],
+            "edges": {
+                "Territory (19,82)": 28.160255680657446,
+                "Territory (24,59)": 30.479501308256342,
+                "Territory (37,105)": 27.85677655436824,
+                "Territory (62,53)": 30.01666203960727,
+                "Territory (71,59)": 31.240998703626616,
+                "Territory (72,63)": 29.68164415931166
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (56,35)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (56,35)",
+            "coords": [
+                56,
+                35
+            ],
+            "edges": {
+                "Territory (39,36)": 17.029386365926403,
+                "Territory (44,24)": 16.278820596099706,
+                "Territory (46,44)": 13.45362404707371,
+                "Territory (57,6)": 29.017236257093817,
+                "Territory (58,26)": 9.219544457292887,
+                "Territory (66,24)": 14.866068747318506,
+                "Territory (67,41)": 12.529964086141668
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (57,6)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (57,6)",
+            "coords": [
+                57,
+                6
+            ],
+            "edges": {
+                "Territory (28,6)": 29.0,
+                "Territory (44,24)": 22.20360331117452,
+                "Territory (56,35)": 29.017236257093817,
+                "Territory (58,26)": 20.024984394500787,
+                "Territory (66,24)": 20.12461179749811,
+                "Territory (85,5)": 28.0178514522438
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (58,26)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (58,26)",
+            "coords": [
+                58,
+                26
+            ],
+            "edges": {
+                "Territory (44,24)": 14.142135623730951,
+                "Territory (56,35)": 9.219544457292887,
+                "Territory (57,6)": 20.024984394500787,
+                "Territory (66,24)": 8.246211251235321
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (61,114)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (61,114)",
+            "coords": [
+                61,
+                114
+            ],
+            "edges": {
+                "Territory (37,105)": 25.632011235952593,
+                "Territory (61,141)": 27.0,
+                "Territory (81,90)": 31.240998703626616,
+                "Territory (87,100)": 29.5296461204668
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (61,141)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (61,141)",
+            "coords": [
+                61,
+                141
+            ],
+            "edges": {
+                "Territory (61,114)": 27.0
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (62,53)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (62,53)",
+            "coords": [
+                62,
+                53
+            ],
+            "edges": {
+                "Territory (47,79)": 30.01666203960727,
+                "Territory (67,41)": 13.0,
+                "Territory (71,59)": 10.816653826391969,
+                "Territory (72,63)": 14.142135623730951,
+                "Territory (76,47)": 15.231546211727817
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (66,24)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (66,24)",
+            "coords": [
+                66,
+                24
+            ],
+            "edges": {
+                "Territory (56,35)": 14.866068747318506,
+                "Territory (57,6)": 20.12461179749811,
+                "Territory (58,26)": 8.246211251235321,
+                "Territory (67,41)": 17.029386365926403,
+                "Territory (74,34)": 12.806248474865697,
+                "Territory (85,5)": 26.870057685088806
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (67,41)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (67,41)",
+            "coords": [
+                67,
+                41
+            ],
+            "edges": {
+                "Territory (56,35)": 12.529964086141668,
+                "Territory (62,53)": 13.0,
+                "Territory (66,24)": 17.029386365926403,
+                "Territory (74,34)": 9.899494936611665,
+                "Territory (76,47)": 10.816653826391969
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (71,59)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (71,59)",
+            "coords": [
+                71,
+                59
+            ],
+            "edges": {
+                "Territory (47,79)": 31.240998703626616,
+                "Territory (62,53)": 10.816653826391969,
+                "Territory (72,63)": 4.123105625617661,
+                "Territory (76,47)": 13.0,
+                "Territory (81,72)": 16.401219466856727,
+                "Territory (84,65)": 14.317821063276353,
+                "Territory (85,55)": 14.560219778561036
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (72,63)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (72,63)",
+            "coords": [
+                72,
+                63
+            ],
+            "edges": {
+                "Territory (47,79)": 29.68164415931166,
+                "Territory (62,53)": 14.142135623730951,
+                "Territory (71,59)": 4.123105625617661,
+                "Territory (76,47)": 16.492422502470642,
+                "Territory (81,72)": 12.727922061357855,
+                "Territory (84,65)": 12.165525060596439,
+                "Territory (85,55)": 15.264337522473747
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (74,34)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (74,34)",
+            "coords": [
+                74,
+                34
+            ],
+            "edges": {
+                "Territory (66,24)": 12.806248474865697,
+                "Territory (67,41)": 9.899494936611665,
+                "Territory (76,47)": 13.152946437965905,
+                "Territory (83,33)": 9.055385138137417,
+                "Territory (85,5)": 31.016124838541646,
+                "Territory (88,44)": 17.204650534085253,
+                "Territory (102,38)": 28.284271247461902
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (76,47)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (76,47)",
+            "coords": [
+                76,
+                47
+            ],
+            "edges": {
+                "Territory (62,53)": 15.231546211727817,
+                "Territory (67,41)": 10.816653826391969,
+                "Territory (71,59)": 13.0,
+                "Territory (72,63)": 16.492422502470642,
+                "Territory (74,34)": 13.152946437965905,
+                "Territory (83,33)": 15.652475842498529,
+                "Territory (85,55)": 12.041594578792296,
+                "Territory (88,44)": 12.36931687685298,
+                "Territory (102,38)": 27.51363298439521
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (81,72)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (81,72)",
+            "coords": [
+                81,
+                72
+            ],
+            "edges": {
+                "Territory (71,59)": 16.401219466856727,
+                "Territory (72,63)": 12.727922061357855,
+                "Territory (84,65)": 7.615773105863909,
+                "Territory (85,83)": 11.704699910719626,
+                "Territory (91,58)": 17.204650534085253,
+                "Territory (94,80)": 15.264337522473747,
+                "Territory (96,68)": 15.524174696260024
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (81,90)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (81,90)",
+            "coords": [
+                81,
+                90
+            ],
+            "edges": {
+                "Territory (61,114)": 31.240998703626616,
+                "Territory (85,83)": 8.06225774829855,
+                "Territory (87,100)": 11.661903789690601,
+                "Territory (90,90)": 9.0,
+                "Territory (93,97)": 13.892443989449804,
+                "Territory (94,80)": 16.401219466856727
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (83,33)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (83,33)",
+            "coords": [
+                83,
+                33
+            ],
+            "edges": {
+                "Territory (74,34)": 9.055385138137417,
+                "Territory (76,47)": 15.652475842498529,
+                "Territory (85,5)": 28.071337695236398,
+                "Territory (88,44)": 12.083045973594572,
+                "Territory (102,15)": 26.1725046566048,
+                "Territory (102,38)": 19.6468827043885
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (84,65)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (84,65)",
+            "coords": [
+                84,
+                65
+            ],
+            "edges": {
+                "Territory (71,59)": 14.317821063276353,
+                "Territory (72,63)": 12.165525060596439,
+                "Territory (81,72)": 7.615773105863909,
+                "Territory (85,55)": 10.04987562112089,
+                "Territory (91,58)": 9.899494936611665,
+                "Territory (96,68)": 12.36931687685298
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (85,5)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (85,5)",
+            "coords": [
+                85,
+                5
+            ],
+            "edges": {
+                "Territory (57,6)": 28.0178514522438,
+                "Territory (66,24)": 26.870057685088806,
+                "Territory (74,34)": 31.016124838541646,
+                "Territory (83,33)": 28.071337695236398,
+                "Territory (102,15)": 19.72308292331602
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (85,55)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (85,55)",
+            "coords": [
+                85,
+                55
+            ],
+            "edges": {
+                "Territory (71,59)": 14.560219778561036,
+                "Territory (72,63)": 15.264337522473747,
+                "Territory (76,47)": 12.041594578792296,
+                "Territory (84,65)": 10.04987562112089,
+                "Territory (88,44)": 11.40175425099138,
+                "Territory (91,58)": 6.708203932499369,
+                "Territory (96,68)": 17.029386365926403,
+                "Territory (102,38)": 24.041630560342615
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (85,83)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (85,83)",
+            "coords": [
+                85,
+                83
+            ],
+            "edges": {
+                "Territory (81,72)": 11.704699910719626,
+                "Territory (81,90)": 8.06225774829855,
+                "Territory (87,100)": 17.11724276862369,
+                "Territory (90,90)": 8.602325267042627,
+                "Territory (93,97)": 16.1245154965971,
+                "Territory (94,80)": 9.486832980505138,
+                "Territory (100,85)": 15.132745950421556
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (87,100)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (87,100)",
+            "coords": [
+                87,
+                100
+            ],
+            "edges": {
+                "Territory (61,114)": 29.5296461204668,
+                "Territory (81,90)": 11.661903789690601,
+                "Territory (85,83)": 17.11724276862369,
+                "Territory (90,90)": 10.44030650891055,
+                "Territory (93,97)": 6.708203932499369,
+                "Territory (95,111)": 13.601470508735444
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (88,44)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (88,44)",
+            "coords": [
+                88,
+                44
+            ],
+            "edges": {
+                "Territory (74,34)": 17.204650534085253,
+                "Territory (76,47)": 12.36931687685298,
+                "Territory (83,33)": 12.083045973594572,
+                "Territory (85,55)": 11.40175425099138,
+                "Territory (91,58)": 14.317821063276353,
+                "Territory (102,38)": 15.231546211727817
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (90,90)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (90,90)",
+            "coords": [
+                90,
+                90
+            ],
+            "edges": {
+                "Territory (81,90)": 9.0,
+                "Territory (85,83)": 8.602325267042627,
+                "Territory (87,100)": 10.44030650891055,
+                "Territory (93,97)": 7.615773105863909,
+                "Territory (94,80)": 10.770329614269007,
+                "Territory (100,85)": 11.180339887498949,
+                "TestB Territory (107,92)": 17.11724276862369
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (91,58)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (91,58)",
+            "coords": [
+                91,
+                58
+            ],
+            "edges": {
+                "Territory (81,72)": 17.204650534085253,
+                "Territory (84,65)": 9.899494936611665,
+                "Territory (85,55)": 6.708203932499369,
+                "Territory (88,44)": 14.317821063276353,
+                "Territory (96,68)": 11.180339887498949,
+                "Territory (102,38)": 22.825424421026653,
+                "Colonizable Territory (102,64)": 12.529964086141668,
+                "Territory (108,59)": 17.029386365926403
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (93,97)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (93,97)",
+            "coords": [
+                93,
+                97
+            ],
+            "edges": {
+                "Territory (81,90)": 13.892443989449804,
+                "Territory (85,83)": 16.1245154965971,
+                "Territory (87,100)": 6.708203932499369,
+                "Territory (90,90)": 7.615773105863909,
+                "Territory (94,80)": 17.029386365926403,
+                "Territory (95,111)": 14.142135623730951,
+                "Territory (100,85)": 13.892443989449804,
+                "Territory (105,99)": 12.165525060596439,
+                "TestB Territory (107,92)": 14.866068747318506
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (93,138)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (93,138)",
+            "coords": [
+                93,
+                138
+            ],
+            "edges": {
+                "Territory (95,111)": 27.073972741361768,
+                "Territory (99,118)": 20.8806130178211,
+                "Territory (108,112)": 30.01666203960727,
+                "Territory (113,136)": 20.09975124224178
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (94,80)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (94,80)",
+            "coords": [
+                94,
+                80
+            ],
+            "edges": {
+                "Territory (81,72)": 15.264337522473747,
+                "Territory (81,90)": 16.401219466856727,
+                "Territory (85,83)": 9.486832980505138,
+                "Territory (90,90)": 10.770329614269007,
+                "Territory (93,97)": 17.029386365926403,
+                "Territory (96,68)": 12.165525060596439,
+                "Territory (100,85)": 7.810249675906654,
+                "Colonizable Territory (102,73)": 10.63014581273465,
+                "TestB Territory (108,79)": 14.035668847618199
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (95,111)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (95,111)",
+            "coords": [
+                95,
+                111
+            ],
+            "edges": {
+                "Territory (87,100)": 13.601470508735444,
+                "Territory (93,97)": 14.142135623730951,
+                "Territory (93,138)": 27.073972741361768,
+                "Territory (99,118)": 8.06225774829855,
+                "Territory (105,99)": 15.620499351813308,
+                "Territory (108,112)": 13.038404810405298,
+                "Territory (113,136)": 30.805843601498726
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (96,68)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (96,68)",
+            "coords": [
+                96,
+                68
+            ],
+            "edges": {
+                "Territory (81,72)": 15.524174696260024,
+                "Territory (84,65)": 12.36931687685298,
+                "Territory (85,55)": 17.029386365926403,
+                "Territory (91,58)": 11.180339887498949,
+                "Territory (94,80)": 12.165525060596439,
+                "Territory (102,38)": 30.59411708155671,
+                "Colonizable Territory (102,64)": 7.211102550927978,
+                "Colonizable Territory (102,73)": 7.810249675906654,
+                "Territory (108,59)": 15.0,
+                "TestB Territory (108,79)": 16.278820596099706,
+                "Territory (111,73)": 15.811388300841896,
+                "Territory (113,65)": 17.26267650163207
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (99,118)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (99,118)",
+            "coords": [
+                99,
+                118
+            ],
+            "edges": {
+                "Territory (93,138)": 20.8806130178211,
+                "Territory (95,111)": 8.06225774829855,
+                "Territory (108,112)": 10.816653826391969,
+                "Territory (113,136)": 22.80350850198276,
+                "Territory (127,118)": 28.0
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (100,85)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (100,85)",
+            "coords": [
+                100,
+                85
+            ],
+            "edges": {
+                "Territory (85,83)": 15.132745950421556,
+                "Territory (90,90)": 11.180339887498949,
+                "Territory (93,97)": 13.892443989449804,
+                "Territory (94,80)": 7.810249675906654,
+                "Colonizable Territory (102,73)": 12.165525060596439,
+                "Territory (105,99)": 14.866068747318506,
+                "TestB Territory (107,92)": 9.899494936611665,
+                "TestB Territory (108,79)": 10.0,
+                "Territory (111,73)": 16.278820596099706,
+                "Territory (115,86)": 15.033296378372908
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (102,15)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (102,15)",
+            "coords": [
+                102,
+                15
+            ],
+            "edges": {
+                "Territory (83,33)": 26.1725046566048,
+                "Territory (85,5)": 19.72308292331602,
+                "Territory (102,38)": 23.0
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (102,38)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (102,38)",
+            "coords": [
+                102,
+                38
+            ],
+            "edges": {
+                "Territory (74,34)": 28.284271247461902,
+                "Territory (76,47)": 27.51363298439521,
+                "Territory (83,33)": 19.6468827043885,
+                "Territory (85,55)": 24.041630560342615,
+                "Territory (88,44)": 15.231546211727817,
+                "Territory (91,58)": 22.825424421026653,
+                "Territory (96,68)": 30.59411708155671,
+                "Territory (102,15)": 23.0,
+                "Colonizable Territory (102,64)": 26.0,
+                "Territory (108,59)": 21.840329667841555,
+                "Territory (113,65)": 29.154759474226502,
+                "Territory (126,45)": 25.0
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Colonizable Territory (102,64)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Colonizable Territory (102,64)",
+            "coords": [
+                102,
+                64
+            ],
+            "edges": {
+                "Territory (91,58)": 12.529964086141668,
+                "Territory (96,68)": 7.211102550927978,
+                "Territory (102,38)": 26.0,
+                "Colonizable Territory (102,73)": 9.0,
+                "Territory (108,59)": 7.810249675906654,
+                "TestB Territory (108,79)": 16.15549442140351,
+                "Territory (111,73)": 12.727922061357855,
+                "Territory (113,65)": 11.045361017187261,
+                "Territory (126,45)": 30.610455730027933
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Colonizable Territory (102,73)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Colonizable Territory (102,73)",
+            "coords": [
+                102,
+                73
+            ],
+            "edges": {
+                "Territory (94,80)": 10.63014581273465,
+                "Territory (96,68)": 7.810249675906654,
+                "Territory (100,85)": 12.165525060596439,
+                "Colonizable Territory (102,64)": 9.0,
+                "Territory (108,59)": 15.231546211727817,
+                "TestB Territory (108,79)": 8.48528137423857,
+                "Territory (111,73)": 9.0,
+                "Territory (113,65)": 13.601470508735444,
+                "Territory (133,72)": 31.016124838541646
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (105,99)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (105,99)",
+            "coords": [
+                105,
+                99
+            ],
+            "edges": {
+                "Territory (93,97)": 12.165525060596439,
+                "Territory (95,111)": 15.620499351813308,
+                "Territory (100,85)": 14.866068747318506,
+                "TestB Territory (107,92)": 7.280109889280518,
+                "Territory (108,112)": 13.341664064126334,
+                "Territory (113,97)": 8.246211251235321,
+                "Territory (115,86)": 16.401219466856727,
+                "Territory (127,118)": 29.068883707497267,
+                "Territory (136,95)": 31.25699921617557
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": true
+            }
+        },
+        "TestB Territory (107,92)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "TestB Territory (107,92)",
+            "coords": [
+                107,
+                92
+            ],
+            "edges": {
+                "Territory (90,90)": 17.11724276862369,
+                "Territory (93,97)": 14.866068747318506,
+                "Territory (100,85)": 9.899494936611665,
+                "Territory (105,99)": 7.280109889280518,
+                "TestB Territory (108,79)": 13.038404810405298,
+                "Territory (113,97)": 7.810249675906654,
+                "Territory (115,86)": 10.0,
+                "Territory (136,95)": 29.154759474226502
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (108,59)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (108,59)",
+            "coords": [
+                108,
+                59
+            ],
+            "edges": {
+                "Territory (91,58)": 17.029386365926403,
+                "Territory (96,68)": 15.0,
+                "Territory (102,38)": 21.840329667841555,
+                "Colonizable Territory (102,64)": 7.810249675906654,
+                "Colonizable Territory (102,73)": 15.231546211727817,
+                "Territory (111,73)": 14.317821063276353,
+                "Territory (113,65)": 7.810249675906654,
+                "Territory (126,45)": 22.80350850198276,
+                "Territory (133,72)": 28.178005607210743
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": true
+            }
+        },
+        "TestB Territory (108,79)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "TestB Territory (108,79)",
+            "coords": [
+                108,
+                79
+            ],
+            "edges": {
+                "Territory (94,80)": 14.035668847618199,
+                "Territory (96,68)": 16.278820596099706,
+                "Territory (100,85)": 10.0,
+                "Colonizable Territory (102,64)": 16.15549442140351,
+                "Colonizable Territory (102,73)": 8.48528137423857,
+                "TestB Territory (107,92)": 13.038404810405298,
+                "Territory (111,73)": 6.708203932499369,
+                "Territory (113,65)": 14.866068747318506,
+                "Territory (115,86)": 9.899494936611665,
+                "Territory (133,72)": 25.96150997149434
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (108,112)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (108,112)",
+            "coords": [
+                108,
+                112
+            ],
+            "edges": {
+                "Territory (93,138)": 30.01666203960727,
+                "Territory (95,111)": 13.038404810405298,
+                "Territory (99,118)": 10.816653826391969,
+                "Territory (105,99)": 13.341664064126334,
+                "Territory (113,97)": 15.811388300841896,
+                "Territory (113,136)": 24.515301344262525,
+                "Territory (127,118)": 19.924858845171276
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (111,73)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (111,73)",
+            "coords": [
+                111,
+                73
+            ],
+            "edges": {
+                "Territory (96,68)": 15.811388300841896,
+                "Territory (100,85)": 16.278820596099706,
+                "Colonizable Territory (102,64)": 12.727922061357855,
+                "Colonizable Territory (102,73)": 9.0,
+                "Territory (108,59)": 14.317821063276353,
+                "TestB Territory (108,79)": 6.708203932499369,
+                "Territory (113,65)": 8.246211251235321,
+                "Territory (115,86)": 13.601470508735444,
+                "Territory (133,72)": 22.02271554554524
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (113,65)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (113,65)",
+            "coords": [
+                113,
+                65
+            ],
+            "edges": {
+                "Territory (96,68)": 17.26267650163207,
+                "Territory (102,38)": 29.154759474226502,
+                "Colonizable Territory (102,64)": 11.045361017187261,
+                "Colonizable Territory (102,73)": 13.601470508735444,
+                "Territory (108,59)": 7.810249675906654,
+                "TestB Territory (108,79)": 14.866068747318506,
+                "Territory (111,73)": 8.246211251235321,
+                "Territory (126,45)": 23.853720883753127,
+                "Territory (133,72)": 21.18962010041709
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (113,97)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (113,97)",
+            "coords": [
+                113,
+                97
+            ],
+            "edges": {
+                "Territory (105,99)": 8.246211251235321,
+                "TestB Territory (107,92)": 7.810249675906654,
+                "Territory (108,112)": 15.811388300841896,
+                "Territory (115,86)": 11.180339887498949,
+                "Territory (127,118)": 25.238858928247925,
+                "Territory (136,95)": 23.08679276123039
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (113,136)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (113,136)",
+            "coords": [
+                113,
+                136
+            ],
+            "edges": {
+                "Territory (93,138)": 20.09975124224178,
+                "Territory (95,111)": 30.805843601498726,
+                "Territory (99,118)": 22.80350850198276,
+                "Territory (108,112)": 24.515301344262525,
+                "Territory (127,118)": 22.80350850198276
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (115,86)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (115,86)",
+            "coords": [
+                115,
+                86
+            ],
+            "edges": {
+                "Territory (100,85)": 15.033296378372908,
+                "Territory (105,99)": 16.401219466856727,
+                "TestB Territory (107,92)": 10.0,
+                "TestB Territory (108,79)": 9.899494936611665,
+                "Territory (111,73)": 13.601470508735444,
+                "Territory (113,97)": 11.180339887498949,
+                "Territory (133,72)": 22.80350850198276,
+                "Territory (136,95)": 22.847319317591726
+            },
+            "details": {
+                "type": "LandTerritory",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": true
+            }
+        },
+        "Territory (126,45)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (126,45)",
+            "coords": [
+                126,
+                45
+            ],
+            "edges": {
+                "Territory (102,38)": 25.0,
+                "Colonizable Territory (102,64)": 30.610455730027933,
+                "Territory (108,59)": 22.80350850198276,
+                "Territory (113,65)": 23.853720883753127,
+                "Territory (133,72)": 27.892651361962706
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (127,118)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (127,118)",
+            "coords": [
+                127,
+                118
+            ],
+            "edges": {
+                "Territory (99,118)": 28.0,
+                "Territory (105,99)": 29.068883707497267,
+                "Territory (108,112)": 19.924858845171276,
+                "Territory (113,97)": 25.238858928247925,
+                "Territory (113,136)": 22.80350850198276,
+                "Territory (136,95)": 24.698178070456937
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (133,72)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (133,72)",
+            "coords": [
+                133,
+                72
+            ],
+            "edges": {
+                "Colonizable Territory (102,73)": 31.016124838541646,
+                "Territory (108,59)": 28.178005607210743,
+                "TestB Territory (108,79)": 25.96150997149434,
+                "Territory (111,73)": 22.02271554554524,
+                "Territory (113,65)": 21.18962010041709,
+                "Territory (115,86)": 22.80350850198276,
+                "Territory (126,45)": 27.892651361962706,
+                "Territory (136,95)": 23.194827009486403
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        },
+        "Territory (136,95)": {
+            "__class__": "Vertex",
+            "__module__": "ConcertOfNations.Mapping",
+            "name": "Territory (136,95)",
+            "coords": [
+                136,
+                95
+            ],
+            "edges": {
+                "Territory (105,99)": 31.25699921617557,
+                "TestB Territory (107,92)": 29.154759474226502,
+                "Territory (113,97)": 23.08679276123039,
+                "Territory (115,86)": 22.847319317591726,
+                "Territory (127,118)": 24.698178070456937,
+                "Territory (133,72)": 23.194827009486403
+            },
+            "details": {
+                "type": "SeaTerritory",
+                "terrain": "Temperate Ocean",
+                "resources": {},
+                "Coastal": true
+            }
+        }
+    }
+}

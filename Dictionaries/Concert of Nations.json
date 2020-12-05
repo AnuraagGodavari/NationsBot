@@ -1,0 +1,199 @@
+{
+	"Game Objects": {
+		"Buildings": {
+			"Barracks": {
+				"__class__": "Building",
+				"__module__": "GameObjects",
+				"name": "Barracks",
+				"buildingCosts": {
+					"cost": 5000,
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": null
+				},
+				"maintenanceCosts": {
+					
+				},
+				"category": "Military",
+				"effects": {
+					"Cumulative": {
+						"Military Capacity": 1,
+						"Local Supply": 10
+					},
+					"Exponential": {}
+				},
+				"territoryRequirements": {
+					"Class": "LandTerritory"
+				},
+				"buildTime": 12
+			}
+		},
+		
+		"Armaments": {
+			"Musketeer" : {
+				"__class__": "Armament",
+				"__module__": "GameObjects",
+				"name": "Musketeer",
+				"type": "Infantry",
+				"buildingCosts": {
+					"cost": 1000,
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": null
+				},
+				"maintenanceCosts": {
+					
+				},
+				"attack": 2,
+				"defense": 2,
+				"speed": 750,
+				"territoryRequirements": {
+					"Class": "LandTerritory"
+				},
+				"category": "Military"
+			}, 
+			
+			"Hussar" : {
+				"__class__": "Armament",
+				"__module__": "GameObjects",
+				"name": "Hussar",
+				"type": "Cavalry",
+				"buildingCosts": {
+					"cost": 1500,
+					"techRequirement": null,
+					"resourceCosts": null,
+					"size": 5
+				},
+				"maintenanceCosts": {
+					
+				},
+				"attack": 1,
+				"defense": 1,
+				"speed": 1250,
+				"territoryRequirements": {
+					"Class": "LandTerritory"
+				},
+				"category": "Military"
+			}, 
+			
+			"Cuirassier" : {
+				"__class__": "Armament",
+				"__module__": "GameObjects",
+				"name": "Cuirassier",
+				"type": "Cavalry",
+				"buildingCosts": {
+					"cost": 2000,
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": null
+				},
+				"maintenanceCosts": {
+					
+				},
+				"attack": 3,
+				"defense": 2,
+				"speed": 1000,
+				"territoryRequirements": {
+					"Class": "LandTerritory"
+				},
+				"category": "Military"
+			}, 
+			
+			"Smoothbore" : {
+				"__class__": "Armament",
+				"__module__": "GameObjects",
+				"name": "Smoothbore",
+				"type": "Artillery",
+				"buildingCosts": {
+					"cost": 1000,
+					"size": 5,
+					"techRequirement": null,
+					"resourceCosts": null
+				},
+				"maintenanceCosts": {
+					
+				},
+				"attack": 4,
+				"defense": 0,
+				"speed": 250,
+				"resourceCosts": null,
+				"territoryRequirements": {
+					"Class": "LandTerritory"
+				},
+				"category": "Military"
+			}
+		},
+		
+		"Ship Types": {
+			"Ship of the Line": {
+				"Hull Size": 200,
+				"Guns": 100,
+				"Speed": 50,
+				"Gun Power": 2,
+				"territoryRequirements": {
+					"Class": "LandTerritory"
+				}
+			},
+			
+			"Frigate": {
+				"Hull Size": 100,
+				"Guns": 50,
+				"Speed": 75,
+				"Gun Power": 2
+			},
+			
+			"Sloop": {
+				"Hull Size": 50,
+				"Guns": 40,
+				"Speed": 100,
+				"Gun Power": 2
+			}
+		}
+	},
+	
+	"Demographic Data": {
+		"Upper Class": {
+			"Revenue Modifier": 1
+		},
+		"Middle Class": {
+			"Revenue Modifier": 0.75
+		},
+		"Lower Class": {
+			"Revenue Modifier": 0.5
+		}
+	},
+	
+	"Terrain Data": {
+	
+	},
+	
+	"Development Levels": {
+		"Primitive": 1,
+		"Feudal": 2,
+		"Late Feudal": 5,
+		"Pre-Industrial": 10,
+		"Early Industrial": 20,
+		"Late Industrial": 30,
+		"Diesel Age": 40,
+		"Oil Age": 60,
+		"Nuclear Age": 100
+	},
+		
+	"Plurals": {
+		"Army": "Armies",
+		"Fleet": "Fleets"
+	},
+	
+	"Policy Types": [
+		"Tradition",
+		"Reform",
+		"Law",
+		"Emergency"
+	],
+	
+	"Project Categories": [
+		"Economic", "Military", "Naval", "Industrial", "Governance", "Infrastructural"
+	],
+		
+	"Ship Power Order": ["Ship of the Line", "Frigate", "Sloop"]
+}

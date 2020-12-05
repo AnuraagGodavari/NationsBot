@@ -1,0 +1,502 @@
+{
+    "__class__": "Galaxy",
+    "__module__": "__main__",
+    "vertices": {
+        "Magadha Star": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha Star",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha I": 0,
+                "Magadha II": 0,
+                "Magadha III": 0,
+                "Magadha IV": 0,
+                "Magadha V": 0,
+                "Magadha VI": 0,
+                "Magadha VII": 0,
+                "Magadha VIII": 0,
+                "Neues Rheinland Star": 48725,
+                "Parushokun Star": 42400,
+                "Victoria Star": 78625,
+                "Labourdonais Star": 93425,
+                "Shahrazad Star": 78125,
+                "Nevsky Star": 32225
+            },
+            "details": {
+                "Type": "SeaTerritory",
+                "System": "Magadha",
+                "Terrain": "Star"
+            }
+        },
+        "Magadha I": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha I",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha Star": 0
+            },
+            "details": {
+                "Type": "LandTerritory",
+                "System": "Magadha",
+                "Terrain": "Venusian"
+            }
+        },
+        "Magadha II": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha II",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha Star": 0
+            },
+            "details": {
+                "Type": "LandTerritory",
+                "System": "Magadha",
+                "Terrain": "Venusian"
+            }
+        },
+        "Magadha III": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha III",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha Star": 0
+            },
+            "details": {
+                "Type": "HabitableTerritory",
+                "System": "Magadha",
+                "Terrain": "Tropical"
+            }
+        },
+        "Magadha IV": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha IV",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha Star": 0
+            },
+            "details": {
+                "Type": "Habitable Territory",
+                "System": "Magadha",
+                "Terrain": "Temperate"
+            }
+        },
+        "Magadha V": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha V",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha Star": 0
+            },
+            "details": {
+                "Type": "HabitableTerritory",
+                "System": "Magadha",
+                "Terrain": "Cold"
+            }
+        },
+        "Magadha VI": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha VI",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha Star": 0
+            },
+            "details": {
+                "Type": "LandTerritory",
+                "System": "Magadha",
+                "Terrain": "Martian"
+            }
+        },
+        "Magadha VII": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha VII",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha Star": 0
+            },
+            "details": {
+                "Type": "OtherTerritory",
+                "System": "Magadha",
+                "Terrain": "Gaseous"
+            }
+        },
+        "Magadha VIII": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Magadha VIII",
+            "coords": [
+                350,
+                200
+            ],
+            "edges": {
+                "Magadha Star": 0
+            },
+            "details": {
+                "Type": "OtherTerritory",
+                "System": "Magadha",
+                "Terrain": "Gaseous"
+            }
+        },
+        "Neues Rheinland Star": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Neues Rheinland Star",
+            "coords": [
+                135,
+                150
+            ],
+            "edges": {
+                "Magadha Star": 48725,
+                "Neues Rheinland I": 0,
+                "Neues Rheinland II": 0,
+                "Neues Rheinland III": 0,
+                "Neues Rheinland IV": 0,
+                "Neues Rheinland V": 0,
+                "Neues Rheinland VI": 0,
+                "Parushokun Star": 3725,
+                "Victoria Star": 8450,
+                "Labourdonais Star": 7300,
+                "Shahrazad Star": 6850,
+                "Nevsky Star": 1700
+            },
+            "details": {
+                "Type": "SeaTerritory",
+                "System": "Neues Rheinland",
+                "Terrain": "Star"
+            }
+        },
+        "Neues Rheinland I": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Neues Rheinland I",
+            "coords": [
+                135,
+                150
+            ],
+            "edges": {
+                "Neues Rheinland Star": 0
+            },
+            "details": {
+                "Type": "LandTerritory",
+                "System": "Neues Rheinland",
+                "Terrain": "Venusian"
+            }
+        },
+        "Neues Rheinland II": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Neues Rheinland II",
+            "coords": [
+                135,
+                150
+            ],
+            "edges": {
+                "Neues Rheinland Star": 0
+            },
+            "details": {
+                "Type": "HabitableTerritory",
+                "System": "Neues Rheinland",
+                "Terrain": "Grassland"
+            }
+        },
+        "Neues Rheinland III": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Neues Rheinland III",
+            "coords": [
+                135,
+                150
+            ],
+            "edges": {
+                "Neues Rheinland Star": 0
+            },
+            "details": {
+                "Type": "HabitableTerritory",
+                "System": "Neues Rheinland",
+                "Terrain": "Temperate"
+            }
+        },
+        "Neues Rheinland IV": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Neues Rheinland IV",
+            "coords": [
+                135,
+                150
+            ],
+            "edges": {
+                "Neues Rheinland Star": 0
+            },
+            "details": {
+                "Type": "HabitableTerritory",
+                "System": "Neues Rheinland",
+                "Terrain": "Alpine"
+            }
+        },
+        "Neues Rheinland V": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Neues Rheinland V",
+            "coords": [
+                135,
+                150
+            ],
+            "edges": {
+                "Neues Rheinland Star": 0
+            },
+            "details": {
+                "Type": "LandTerritory",
+                "System": "Neues Rheinland",
+                "Terrain": "Martian"
+            }
+        },
+        "Neues Rheinland VI": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Neues Rheinland VI",
+            "coords": [
+                135,
+                150
+            ],
+            "edges": {
+                "Neues Rheinland Star": 0
+            },
+            "details": {
+                "Type": "OtherTerritory",
+                "System": "Neues Rheinland",
+                "Terrain": "Gaseous"
+            }
+        },
+        "Parushokun Star": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Parushokun Star",
+            "coords": [
+                170,
+                100
+            ],
+            "edges": {
+                "Magadha Star": 42400,
+                "Neues Rheinland Star": 3725,
+                "Parushokun I": 0,
+                "Parushokun II": 0,
+                "Parushokun III": 0,
+                "Parushokun IV": 0,
+                "Parushokun V": 0,
+                "Victoria Star": 23225,
+                "Labourdonais Star": 13625,
+                "Shahrazad Star": 5525,
+                "Nevsky Star": 3625
+            },
+            "details": {
+                "Type": "SeaTerritory",
+                "System": "Parushokun",
+                "Terrain": "Star"
+            }
+        },
+        "Parushokun I": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Parushokun I",
+            "coords": [
+                170,
+                100
+            ],
+            "edges": {
+                "Parushokun Star": 0
+            },
+            "details": {
+                "Type": "HabitableTerritory",
+                "System": "Parushokun",
+                "Terrain": "Hilly"
+            }
+        },
+        "Parushokun II": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Parushokun II",
+            "coords": [
+                170,
+                100
+            ],
+            "edges": {
+                "Parushokun Star": 0
+            },
+            "details": {
+                "Type": "HabitableTerritory",
+                "System": "Parushokun",
+                "Terrain": "Alpine"
+            }
+        },
+        "Parushokun III": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Parushokun III",
+            "coords": [
+                170,
+                100
+            ],
+            "edges": {
+                "Parushokun Star": 0
+            },
+            "details": {
+                "Type": "HabitableTerritory",
+                "System": "Parushokun",
+                "Terrain": "Uralic"
+            }
+        },
+        "Parushokun IV": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Parushokun IV",
+            "coords": [
+                170,
+                100
+            ],
+            "edges": {
+                "Parushokun Star": 0
+            },
+            "details": {
+                "Type": "LandTerritory",
+                "System": "Parushokun",
+                "Terrain": "Martian"
+            }
+        },
+        "Parushokun V": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Parushokun V",
+            "coords": [
+                170,
+                100
+            ],
+            "edges": {
+                "Parushokun Star": 0
+            },
+            "details": {
+                "Type": "OtherTerritory",
+                "System": "Parushokun",
+                "Terrain": "Gaseous"
+            }
+        },
+        "Victoria Star": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Victoria Star",
+            "coords": [
+                70,
+                215
+            ],
+            "edges": {
+                "Magadha Star": 78625,
+                "Neues Rheinland Star": 8450,
+                "Parushokun Star": 23225,
+                "Labourdonais Star": 9250,
+                "Shahrazad Star": 20500,
+                "Nevsky Star": 14050
+            },
+            "details": {
+                "Type": "SeaTerritory",
+                "System": "Victoria",
+                "Terrain": "Star"
+            }
+        },
+        "Labourdonais Star": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Labourdonais Star",
+            "coords": [
+                55,
+                120
+            ],
+            "edges": {
+                "Magadha Star": 93425,
+                "Neues Rheinland Star": 7300,
+                "Parushokun Star": 13625,
+                "Victoria Star": 9250,
+                "Shahrazad Star": 4050,
+                "Nevsky Star": 16000
+            },
+            "details": {
+                "Type": "SeaTerritory",
+                "System": "Labourdonais",
+                "Terrain": "Star"
+            }
+        },
+        "Shahrazad Star": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Shahrazad Star",
+            "coords": [
+                100,
+                75
+            ],
+            "edges": {
+                "Magadha Star": 78125,
+                "Neues Rheinland Star": 6850,
+                "Parushokun Star": 5525,
+                "Victoria Star": 20500,
+                "Labourdonais Star": 4050,
+                "Nevsky Star": 12850
+            },
+            "details": {
+                "Type": "SeaTerritory",
+                "System": "Shahrazad",
+                "Terrain": "Star"
+            }
+        },
+        "Nevsky Star": {
+            "__class__": "Vertex",
+            "__module__": "__main__",
+            "name": "Nevsky Star",
+            "coords": [
+                175,
+                160
+            ],
+            "edges": {
+                "Magadha Star": 32225,
+                "Neues Rheinland Star": 1700,
+                "Parushokun Star": 3625,
+                "Victoria Star": 14050,
+                "Labourdonais Star": 16000,
+                "Shahrazad Star": 12850
+            },
+            "details": {
+                "Type": "SeaTerritory",
+                "System": "Nevsky",
+                "Terrain": "Star"
+            }
+        }
+    }
+}

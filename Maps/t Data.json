@@ -1,0 +1,385 @@
+{
+    "__class__": "Map",
+    "__module__": "Mapping",
+    "vertices": {
+        "Test 1": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 1",
+            "coords": [
+                116,
+                144
+            ],
+            "edges": {
+                "Test 3": 2705,
+                "Test 4": 2386,
+                "Test 7": 2626,
+                "Test 14": 730
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": false
+            }
+        },
+        "Test 2": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 2",
+            "coords": [
+                65,
+                7
+            ],
+            "edges": {
+                "Test 6": 1370,
+                "Test 10": 2637
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": false
+            }
+        },
+        "Test 3": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 3",
+            "coords": [
+                64,
+                145
+            ],
+            "edges": {
+                "Test 1": 2705,
+                "Test 4": 449,
+                "Test 5": 281,
+                "Test 7": 17,
+                "Test 8": 226,
+                "Test 9": 964,
+                "Test 11": 1040,
+                "Test 14": 629,
+                "Test 15": 2837
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": false
+            }
+        },
+        "Test 4": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 4",
+            "coords": [
+                71,
+                125
+            ],
+            "edges": {
+                "Test 1": 2386,
+                "Test 3": 449,
+                "Test 5": 160,
+                "Test 7": 612,
+                "Test 8": 89,
+                "Test 9": 325,
+                "Test 11": 1777,
+                "Test 12": 2389,
+                "Test 14": 648,
+                "Test 15": 2122
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": false
+            }
+        },
+        "Test 5": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 5",
+            "coords": [
+                59,
+                129
+            ],
+            "edges": {
+                "Test 3": 281,
+                "Test 4": 160,
+                "Test 7": 436,
+                "Test 8": 17,
+                "Test 9": 205,
+                "Test 11": 873,
+                "Test 12": 2285,
+                "Test 14": 1096,
+                "Test 15": 1466
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": false
+            }
+        },
+        "Test 6": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 6",
+            "coords": [
+                66,
+                44
+            ],
+            "edges": {
+                "Test 2": 1370,
+                "Test 12": 1921
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": false
+            }
+        },
+        "Test 7": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 7",
+            "coords": [
+                65,
+                149
+            ],
+            "edges": {
+                "Test 1": 2626,
+                "Test 3": 17,
+                "Test 4": 612,
+                "Test 5": 436,
+                "Test 8": 365,
+                "Test 9": 1237,
+                "Test 11": 1153,
+                "Test 14": 612
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 4
+                },
+                "Coastal": false
+            }
+        },
+        "Test 8": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 8",
+            "coords": [
+                63,
+                130
+            ],
+            "edges": {
+                "Test 3": 226,
+                "Test 4": 89,
+                "Test 5": 17,
+                "Test 7": 365,
+                "Test 9": 274,
+                "Test 11": 1082,
+                "Test 12": 2498,
+                "Test 14": 845,
+                "Test 15": 1765
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": false
+            }
+        },
+        "Test 9": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 9",
+            "coords": [
+                56,
+                115
+            ],
+            "edges": {
+                "Test 3": 964,
+                "Test 4": 325,
+                "Test 5": 205,
+                "Test 7": 1237,
+                "Test 8": 274,
+                "Test 11": 1252,
+                "Test 12": 1124,
+                "Test 14": 1873,
+                "Test 15": 797
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": false
+            }
+        },
+        "Test 10": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 10",
+            "coords": [
+                116,
+                13
+            ],
+            "edges": {
+                "Test 2": 2637
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": false
+            }
+        },
+        "Test 11": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 11",
+            "coords": [
+                32,
+                141
+            ],
+            "edges": {
+                "Test 3": 1040,
+                "Test 4": 1777,
+                "Test 5": 873,
+                "Test 7": 1153,
+                "Test 8": 1082,
+                "Test 9": 1252,
+                "Test 15": 1373
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 3
+                },
+                "Coastal": false
+            }
+        },
+        "Test 12": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 12",
+            "coords": [
+                46,
+                83
+            ],
+            "edges": {
+                "Test 4": 2389,
+                "Test 5": 2285,
+                "Test 6": 1921,
+                "Test 8": 2498,
+                "Test 9": 1124,
+                "Test 13": 1682,
+                "Test 15": 697
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": false
+            }
+        },
+        "Test 13": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 13",
+            "coords": [
+                5,
+                82
+            ],
+            "edges": {
+                "Test 12": 1682,
+                "Test 15": 1109
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": false
+            }
+        },
+        "Test 14": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 14",
+            "coords": [
+                89,
+                143
+            ],
+            "edges": {
+                "Test 1": 730,
+                "Test 3": 629,
+                "Test 4": 648,
+                "Test 5": 1096,
+                "Test 7": 612,
+                "Test 8": 845,
+                "Test 9": 1873
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 1
+                },
+                "Coastal": false
+            }
+        },
+        "Test 15": {
+            "__class__": "Vertex",
+            "__module__": "Mapping",
+            "name": "Test 15",
+            "coords": [
+                30,
+                104
+            ],
+            "edges": {
+                "Test 3": 2837,
+                "Test 4": 2122,
+                "Test 5": 1466,
+                "Test 8": 1765,
+                "Test 9": 797,
+                "Test 11": 1373,
+                "Test 12": 697,
+                "Test 13": 1109
+            },
+            "details": {
+                "type": "Land",
+                "terrain": "Flat",
+                "resources": {
+                    "Iron": 2
+                },
+                "Coastal": false
+            }
+        }
+    }
+}
