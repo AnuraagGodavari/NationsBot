@@ -317,10 +317,10 @@ class NationsCog(commands.Cog):
         gameInfo = getGameInfo(ctx)
         requiredArg = ' '.join(requiredArgs)
         
-        terrs = NationController.allTerritories(gameInfo["Savegame"], gameInfo["Nation Name"])
+        territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], requiredArg)
+        
         #If this is a territory
-        if (requiredArg in terrs):
-            territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], requiredArg)
+        if (territory):
             
             pages, pageNo = [], 0
             pagedProjects = Util.pageify(list(territory.projects.values()), 10)
@@ -328,7 +328,7 @@ class NationsCog(commands.Cog):
             for page in pagedProjects:
             
                 newEmbed = discord.Embed(
-                        title = f"{requiredArg} || Page {pageNo}/{len(pagedProjects) - 1}",
+                        title = f"{requiredArg} Projects || Page {pageNo}/{len(pagedProjects) - 1}",
                         description = f"Status: \"{territory.status}\"\n_Type 'n.page <pageNo>' to go to a specific page._",
                         color = discord.Color.blue()
                     )
@@ -345,6 +345,7 @@ class NationsCog(commands.Cog):
                 playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
             
             playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.projects:{requiredArg}", "Pages": pages, "Page": 0})
+        
         
         elif(True):
             pass
@@ -431,10 +432,8 @@ class NationsCog(commands.Cog):
             if (optionalArg.isdigit()): optionalArg = int(optionalArg)
             else: optionalArg = 0
             
-            fleet = NationController.getUnitGroup(gameInfo["Savegame"], gameInfo["Nation Name"], optionalArg)
-            
             pages = makePages(
-            list(fleet.composition.values()),
+            list(fleets.values()),
             f"Nation <{gameInfo['Nation Name']}> Fleets",
             "_Type 'n.fleets <pageNo>' to go to a specific page, or n.fleets <fleet name> to get a fleet's information._",
             ["name"],

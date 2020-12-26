@@ -114,7 +114,11 @@ def allTerritories(saveGame, nationName):
 
 #See Individual Territory Info
 def getTerritory(saveGame, nationName, territoryName):
-    return saveGame[nationName].territories[territoryName]
+
+    if territoryName in saveGame[nationName].territories:
+        return saveGame[nationName].territories[territoryName]
+        
+    return False
 
 #Build Project in a Territory
 def buildProject(saveGame, nationName, projectName, territoryName):
