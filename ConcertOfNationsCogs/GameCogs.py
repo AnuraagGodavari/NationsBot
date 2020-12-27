@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import json, os, pprint, traceback, datetime
-from NationController import *
+from GameCommands import *
 from ConcertOfNations import *
 
 print("GameCogs.py GAME MASTER AND NATION COGS FOR CONCERT OF NATIONS BOT\n*****\n")
@@ -313,22 +313,23 @@ class NationsCog(commands.Cog):
     
     #Gets a list of projects in a territory or a specific project
     @commands.command()
-    async def projects(self, ctx, *requiredArgs): #requiredArgs is a territory name or specific project
+    async def projects(self, ctx, *optionalArgs): #requiredArgs is a territory name or specific project
         gameInfo = getGameInfo(ctx)
-        requiredArg = ' '.join(requiredArgs)
+        optionalArg = ' '.join(optionalArgs)
         
-        territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], requiredArg)
+        territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], optionalArgs)
+        
+        pages, pageNo = [], 0
         
         #If this is a territory
         if (territory):
             
-            pages, pageNo = [], 0
             pagedProjects = Util.pageify(list(territory.projects.values()), 10)
             
             for page in pagedProjects:
             
                 newEmbed = discord.Embed(
-                        title = f"{requiredArg} Projects || Page {pageNo}/{len(pagedProjects) - 1}",
+                        title = f"{optionalArg} Projects || Page {pageNo}/{len(pagedProjects) - 1}",
                         description = f"Status: \"{territory.status}\"\n_Type 'n.page <pageNo>' to go to a specific page._",
                         color = discord.Color.blue()
                     )
@@ -344,11 +345,43 @@ class NationsCog(commands.Cog):
             if ("Stack" not in playerStatuses[str(ctx.author.id)]):
                 playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
             
-            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.projects:{requiredArg}", "Pages": pages, "Page": 0})
+            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.projects:{optionalArg}", "Pages": pages, "Page": 0})
         
+        #If we want to see the information for a particular buildable rather than all the projects in one territory
+        #elif (optionalArg):
+        #    pass
         
-        elif(True):
-            pass
+        #If we want to see all buildables
+        else:
+            allBuildables = GameDictInfo.allBuildables(gameInfo["Savegame"])
+            pagedBuildables = Util.pageify(list(allBuildables.values()), 10)
+            
+            for page in pagedBuildables:
+            
+                newEmbed = discord.Embed(
+                        title = f"{optionalArg} Projects || Page {pageNo}/{len(pagedBuildables) - 1}",
+                        description = f"All buildable projects:\n_Type 'n.page <pageNo>' to go to a specific page._",
+                        color = discord.Color.blue()
+                    )
+                    
+                for project in page:
+                    
+                    #Put all resource costs into one string
+                    resourceCosts = ""
+                    
+                    newEmbed.add_field(name = f"{project['name']}", 
+                        value = f"Size: {project['buildingCosts']['size']}, Category: {project['category']}, Build Time: {project['buildTime']}", 
+                        inline = False)
+                
+                pages.append(newEmbed)
+                pageNo += 1
+            
+            await ctx.send(embed = pages[0])
+            
+            if ("Stack" not in playerStatuses[str(ctx.author.id)]):
+                playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
+            
+            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.projects", "Pages": pages, "Page": 0})
     
     #Gets a list of demographics in the nation or in a territory
     @commands.command()
