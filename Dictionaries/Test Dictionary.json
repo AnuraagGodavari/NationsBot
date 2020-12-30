@@ -9,7 +9,9 @@
 					"size": 5,
 					"techRequirement": null,
 					"resourceCosts": {
-						"Money": 0
+						"Money": 0,
+						"Iron": 0,
+						"Coal": 0
 					}
 				},
 				"Maintenance Costs": {

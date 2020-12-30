@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import json, os, pprint, traceback, datetime
-from NationController import *
+from GameCommands import *
 from ConcertOfNations import *
 
 print("GameCogs.py GAME MASTER AND NATION COGS FOR CONCERT OF NATIONS BOT\n*****\n")
@@ -9,6 +9,7 @@ print("GameCogs.py GAME MASTER AND NATION COGS FOR CONCERT OF NATIONS BOT\n*****
 #REMINDERS:
 print("-----\nREMINDERS:\n")
 print("Make pages able to evaluate functions (use eval()?)!\n")
+print("Check out modifiers['Nation']['National'] and the like!")
 print("-----\n")
 
 #A cache of saveGames being played.
@@ -313,22 +314,23 @@ class NationsCog(commands.Cog):
     
     #Gets a list of projects in a territory or a specific project
     @commands.command()
-    async def projects(self, ctx, *requiredArgs): #requiredArgs is a territory name or specific project
+    async def projects(self, ctx, *optionalArgs): #requiredArgs is a territory name or specific project
         gameInfo = getGameInfo(ctx)
-        requiredArg = ' '.join(requiredArgs)
+        optionalArg = ' '.join(optionalArgs)
         
-        territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], requiredArg)
+        territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], optionalArgs)
+        
+        pages, pageNo = [], 0
         
         #If this is a territory
         if (territory):
             
-            pages, pageNo = [], 0
             pagedProjects = Util.pageify(list(territory.projects.values()), 10)
             
             for page in pagedProjects:
             
                 newEmbed = discord.Embed(
-                        title = f"{requiredArg} Projects || Page {pageNo}/{len(pagedProjects) - 1}",
+                        title = f"{optionalArg} Projects || Page {pageNo}/{len(pagedProjects) - 1}",
                         description = f"Status: \"{territory.status}\"\n_Type 'n.page <pageNo>' to go to a specific page._",
                         color = discord.Color.blue()
                     )
@@ -344,11 +346,118 @@ class NationsCog(commands.Cog):
             if ("Stack" not in playerStatuses[str(ctx.author.id)]):
                 playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
             
-            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.projects:{requiredArg}", "Pages": pages, "Page": 0})
+            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.projects:{optionalArg}", "Pages": pages, "Page": 0})
         
+        #If we want to see the information for a particular buildable rather than all the projects in one territory
+        elif (optionalArg):
+            buildable = GameDictInfo.buildableInfo(gameInfo["Savegame"], optionalArg)
+            
+            if (buildable):
+                newEmbed = discord.Embed(
+                        title = optionalArg + " Information",
+                        description = f"Size: {buildable['buildingCosts']['size']}, Category: {buildable['category']}, Build Time: {buildable['buildTime']}",
+                        color = discord.Color.blue()
+                    )
+                    
+                completionEffects = buildable["Completion Effects"]
+                
+                #=================
+                
+                #Put all territory requirements into one string
+                territoryRequirements = ">>> "
+                
+                for requirement in buildable["territoryRequirements"].keys():
+                    territoryRequirements += "  " + requirement[:1].upper() + requirement[1:] + ": " + str(buildable["territoryRequirements"][requirement]) + "\n"
+                
+                #Add territory requirements field
+                newEmbed.add_field(name = "**Territory Requirements:**\n", 
+                    value = territoryRequirements, 
+                    inline = False)
+                
+                #=================
+                    
+                #Put all resource costs into one string
+                resourceCosts = ">>> "
+                
+                for resource in buildable["buildingCosts"]["resourceCosts"].keys():
+                    resourceCosts += "  " + resource + ": " + str(buildable["buildingCosts"]["resourceCosts"][resource]) + "\n"
+                
+                #Add resource costs field
+                newEmbed.add_field(name = "**Resource Costs:**\n", 
+                    value = resourceCosts, 
+                    inline = False)
+                
+                #=================
+                
+                #Put all maintenance costs into one string
+                maintenanceCosts = ">>> "
+                
+                for resource in buildable["Maintenance Costs"].keys():
+                    maintenanceCosts += "  " + resource + ": " + str(buildable["Maintenance Costs"][resource]) + "\n"
+                
+                #Add maintenance costs field
+                newEmbed.add_field(name = "**Maintenance Costs:**\n", 
+                    value = maintenanceCosts, 
+                    inline = False)
+                
+                #=================
+                
+                #Put all national/territorial, cumulative/exponential effects in a string for each
+                
+                for superEffectLevel in completionEffects.keys():
+                    for effectLevel in completionEffects[superEffectLevel].keys():
+                        allEffects = ">>> "
+                        
+                        for effectType in completionEffects[superEffectLevel][effectLevel].keys():
+                        
+                            for effectName in completionEffects[superEffectLevel][effectLevel][effectType].keys():
+                                
+                                allEffects += "  " + effectName + ": " + str(completionEffects[superEffectLevel][effectLevel][effectType][effectName]) + "\n"
+                    
+                            #Add effects fields
+                            newEmbed.add_field(name = f"**{effectLevel} {effectType} Effects:**\n", 
+                                value = allEffects, 
+                                inline = False)
+                
+                #=================
+            
+                await ctx.send(embed = newEmbed)
+                
+                if ("Stack" not in playerStatuses[str(ctx.author.id)]):
+                    playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
+                
+                playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.projects", "Pages": [newEmbed], "Page": 0})
+                
+            else: await ctx.send(f"Building \"{optionalArg}\" does not exist!")
         
-        elif(True):
-            pass
+        #If we want to see all buildables
+        else:
+            allBuildables = GameDictInfo.allBuildables(gameInfo["Savegame"])
+            pagedBuildables = Util.pageify(list(allBuildables.values()), 10)
+            
+            for page in pagedBuildables:
+            
+                newEmbed = discord.Embed(
+                        title = f"{optionalArg} Projects || Page {pageNo}/{len(pagedBuildables) - 1}",
+                        description = f"All buildable projects\n_Type 'n.page <pageNo>' to go to a specific page._",
+                        color = discord.Color.blue()
+                    )
+                    
+                for project in page:
+                    
+                    newEmbed.add_field(name = f"{project['name']}", 
+                        value = f"Size: {project['buildingCosts']['size']}, Category: {project['category']}, Build Time: {project['buildTime']}", 
+                        inline = False)
+                
+                pages.append(newEmbed)
+                pageNo += 1
+            
+            await ctx.send(embed = pages[0])
+            
+            if ("Stack" not in playerStatuses[str(ctx.author.id)]):
+                playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
+            
+            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.projects", "Pages": pages, "Page": 0})
     
     #Gets a list of demographics in the nation or in a territory
     @commands.command()

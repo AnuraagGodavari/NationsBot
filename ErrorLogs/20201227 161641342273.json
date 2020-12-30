@@ -1,0 +1,20 @@
+{
+    "ctx": {
+        "Author ID": 246808378913849345,
+        "Server ID": 747926191541059717
+    },
+    "Error Time": "2020-12-27 16:16:41.342273",
+    "Exception": "Command raised an exception: KeyError: 'name'",
+    "Stack Trace": [
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 85, in wrapped\n    ret = await coro(*args, **kwargs)\n",
+        "  File \"D:\\Programs\\Python\\ConcertOfNations\\NationsBot\\ConcertOfNationsCogs\\GameCogs.py\", line 372, in projects\n    newEmbed.add_field(name = f\"{project['name']}\",\n",
+        "KeyError: 'name'\n",
+        "\nThe above exception was the direct cause of the following exception:\n\n",
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\bot.py\", line 903, in invoke\n    await ctx.command.invoke(ctx)\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 855, in invoke\n    await injected(*ctx.args, **ctx.kwargs)\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 94, in wrapped\n    raise CommandInvokeError(exc) from exc\n",
+        "discord.ext.commands.errors.CommandInvokeError: Command raised an exception: KeyError: 'name'\n"
+    ]
+}

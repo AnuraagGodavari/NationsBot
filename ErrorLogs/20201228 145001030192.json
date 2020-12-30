@@ -1,0 +1,21 @@
+{
+    "ctx": {
+        "Author ID": 246808378913849345,
+        "Server ID": 747926191541059717
+    },
+    "Error Time": "2020-12-28 14:50:01.030192",
+    "Exception": "Command raised an exception: KeyError: 'asd'",
+    "Stack Trace": [
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 85, in wrapped\n    ret = await coro(*args, **kwargs)\n",
+        "  File \"D:\\Programs\\Python\\ConcertOfNations\\NationsBot\\ConcertOfNationsCogs\\GameCogs.py\", line 352, in projects\n    buildable = GameDictInfo.buildableInfo(gameInfo[\"Savegame\"], optionalArg)\n",
+        "  File \"D:\\Programs\\Python\\ConcertOfNations\\NationsBot\\GameCommands\\GameDictInfo.py\", line 11, in buildableInfo\n    return saveGame.getGameDict()[\"Game Objects\"][\"Buildings\"][buildableName]\n",
+        "KeyError: 'asd'\n",
+        "\nThe above exception was the direct cause of the following exception:\n\n",
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\bot.py\", line 903, in invoke\n    await ctx.command.invoke(ctx)\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 855, in invoke\n    await injected(*ctx.args, **ctx.kwargs)\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 94, in wrapped\n    raise CommandInvokeError(exc) from exc\n",
+        "discord.ext.commands.errors.CommandInvokeError: Command raised an exception: KeyError: 'asd'\n"
+    ]
+}
