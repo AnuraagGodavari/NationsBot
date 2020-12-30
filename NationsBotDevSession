@@ -1,7 +1,7 @@
 <NotepadPlus>
     <Session activeView="0">
-        <mainView activeIndex="6">
-            <File firstVisibleLine="233" xOffset="0" scrollWidth="1688" startPos="61696" endPos="61696" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNations\GameObjects.py" backupFilePath="" originalFileLastModifTimestamp="-1312984320" originalFileLastModifTimestampHigh="30836044" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
+        <mainView activeIndex="7">
+            <File firstVisibleLine="9" xOffset="0" scrollWidth="1552" startPos="844" endPos="844" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNations\GameObjects.py" backupFilePath="" originalFileLastModifTimestamp="-1312984320" originalFileLastModifTimestampHigh="30836044" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
                 <Fold line="17" />
                 <Fold line="18" />
                 <Fold line="44" />
@@ -191,7 +191,7 @@
                 <Fold line="2058" />
                 <Fold line="2062" />
             </File>
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1704" startPos="538" endPos="538" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNations\FileHandling.py" backupFilePath="" originalFileLastModifTimestamp="1166554112" originalFileLastModifTimestampHigh="30835878" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1353839264" mapWrapIndentMode="-1" mapIsWrap="no">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1552" startPos="538" endPos="538" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNations\FileHandling.py" backupFilePath="" originalFileLastModifTimestamp="1166554112" originalFileLastModifTimestampHigh="30835878" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1353839264" mapWrapIndentMode="-1" mapIsWrap="no">
                 <Fold line="5" />
                 <Fold line="17" />
                 <Fold line="25" />
@@ -200,7 +200,7 @@
                 <Fold line="76" />
                 <Fold line="87" />
             </File>
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1704" startPos="10597" endPos="10597" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNations\Mapping.py" backupFilePath="" originalFileLastModifTimestamp="-1567428352" originalFileLastModifTimestampHigh="30836061" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1552" startPos="10597" endPos="10597" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNations\Mapping.py" backupFilePath="" originalFileLastModifTimestamp="-1567428352" originalFileLastModifTimestampHigh="30836061" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
                 <Fold line="5" />
                 <Fold line="6" />
                 <Fold line="14" />
@@ -225,7 +225,7 @@
                 <Fold line="362" />
                 <Fold line="383" />
             </File>
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1688" startPos="11469" endPos="11469" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNations\Util.py" backupFilePath="" originalFileLastModifTimestamp="1616688640" originalFileLastModifTimestampHigh="30836035" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="-1381382608" mapWrapIndentMode="-1" mapIsWrap="no">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1552" startPos="11469" endPos="11469" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNations\Util.py" backupFilePath="" originalFileLastModifTimestamp="1616688640" originalFileLastModifTimestampHigh="30836035" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="-1381382608" mapWrapIndentMode="-1" mapIsWrap="no">
                 <Fold line="2" />
                 <Fold line="3" />
                 <Fold line="7" />
@@ -288,7 +288,7 @@
                 <Fold line="423" />
                 <Fold line="442" />
             </File>
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1704" startPos="148" endPos="0" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\GameCommands\NationController.py" backupFilePath="" originalFileLastModifTimestamp="-383885056" originalFileLastModifTimestampHigh="30858185" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1667590243" mapWrapIndentMode="-1" mapIsWrap="no">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1552" startPos="148" endPos="0" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\GameCommands\NationController.py" backupFilePath="" originalFileLastModifTimestamp="-383885056" originalFileLastModifTimestampHigh="30858185" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1667590243" mapWrapIndentMode="-1" mapIsWrap="no">
                 <Fold line="5" />
                 <Fold line="18" />
                 <Fold line="23" />
@@ -310,40 +310,40 @@
                 <Fold line="134" />
                 <Fold line="138" />
             </File>
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1704" startPos="488" endPos="488" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\GameCommands\GameDictInfo.py" backupFilePath="" originalFileLastModifTimestamp="-866032384" originalFileLastModifTimestampHigh="30858578" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
-            <File firstVisibleLine="367" xOffset="0" scrollWidth="1704" startPos="17238" endPos="17238" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNationsCogs\GameCogs.py" backupFilePath="" originalFileLastModifTimestamp="1085864448" originalFileLastModifTimestampHigh="30858637" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
-                <Fold line="24" />
-                <Fold line="62" />
-                <Fold line="66" />
-                <Fold line="73" />
-                <Fold line="78" />
-                <Fold line="128" />
-                <Fold line="134" />
-                <Fold line="139" />
-                <Fold line="146" />
-                <Fold line="150" />
-                <Fold line="207" />
-                <Fold line="212" />
-                <Fold line="233" />
-                <Fold line="238" />
-                <Fold line="269" />
-                <Fold line="275" />
-                <Fold line="295" />
-                <Fold line="324" />
-                <Fold line="414" />
-                <Fold line="449" />
-                <Fold line="456" />
-                <Fold line="474" />
-                <Fold line="494" />
-                <Fold line="501" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1552" startPos="488" endPos="488" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\GameCommands\GameDictInfo.py" backupFilePath="" originalFileLastModifTimestamp="-866032384" originalFileLastModifTimestampHigh="30858578" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="239" xOffset="0" scrollWidth="1552" startPos="15053" endPos="15053" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNationsCogs\GameCogs.py" backupFilePath="" originalFileLastModifTimestamp="672928512" originalFileLastModifTimestampHigh="30858853" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
+                <Fold line="25" />
+                <Fold line="63" />
+                <Fold line="67" />
+                <Fold line="74" />
+                <Fold line="79" />
+                <Fold line="129" />
+                <Fold line="135" />
+                <Fold line="140" />
+                <Fold line="147" />
+                <Fold line="151" />
+                <Fold line="208" />
+                <Fold line="213" />
+                <Fold line="234" />
+                <Fold line="239" />
+                <Fold line="270" />
+                <Fold line="276" />
+                <Fold line="296" />
+                <Fold line="325" />
+                <Fold line="433" />
+                <Fold line="468" />
+                <Fold line="475" />
+                <Fold line="493" />
+                <Fold line="513" />
                 <Fold line="520" />
-                <Fold line="542" />
-                <Fold line="558" />
-                <Fold line="571" />
+                <Fold line="539" />
+                <Fold line="561" />
+                <Fold line="577" />
+                <Fold line="590" />
             </File>
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1704" startPos="153" endPos="153" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\NationsBot.py" backupFilePath="" originalFileLastModifTimestamp="-877517312" originalFileLastModifTimestampHigh="30853946" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1704" startPos="764" endPos="782" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\cogs\CogTest.py" backupFilePath="" originalFileLastModifTimestamp="-488139520" originalFileLastModifTimestampHigh="30830994" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="-55143089" mapWrapIndentMode="-1" mapIsWrap="no" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1704" startPos="345" endPos="356" selMode="0" offset="0" wrapCount="1" lang="JSON" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\Dictionaries\Test Dictionary.json" backupFilePath="" originalFileLastModifTimestamp="-980868864" originalFileLastModifTimestampHigh="30858583" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1552" startPos="419" endPos="419" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\NationsBot.py" backupFilePath="" originalFileLastModifTimestamp="-877517312" originalFileLastModifTimestampHigh="30853946" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1496" startPos="764" endPos="782" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\cogs\CogTest.py" backupFilePath="" originalFileLastModifTimestamp="-488139520" originalFileLastModifTimestampHigh="30830994" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="-55143089" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1552" startPos="837" endPos="858" selMode="0" offset="0" wrapCount="1" lang="JSON" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\Dictionaries\Test Dictionary.json" backupFilePath="" originalFileLastModifTimestamp="-980868864" originalFileLastModifTimestampHigh="30858583" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
                 <Fold line="49" />
                 <Fold line="93" />
                 <Fold line="134" />
@@ -363,9 +363,9 @@
                 <Fold line="421" />
                 <Fold line="428" />
             </File>
-            <File firstVisibleLine="36" xOffset="0" scrollWidth="1704" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JSON" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\Maps\mapFromImage.json" backupFilePath="" originalFileLastModifTimestamp="-1320607232" originalFileLastModifTimestampHigh="30858591" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1688" startPos="89" endPos="89" selMode="0" offset="0" wrapCount="1" lang="JSON" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\Data\NationsBotData.json" backupFilePath="" originalFileLastModifTimestamp="1236574976" originalFileLastModifTimestampHigh="30834044" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="1688" startPos="1874" endPos="1874" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNationsTest.py" backupFilePath="" originalFileLastModifTimestamp="-2145917952" originalFileLastModifTimestampHigh="30833661" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
+            <File firstVisibleLine="36" xOffset="0" scrollWidth="1256" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JSON" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\Maps\mapFromImage.json" backupFilePath="" originalFileLastModifTimestamp="-597136896" originalFileLastModifTimestampHigh="30858850" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1496" startPos="89" endPos="89" selMode="0" offset="0" wrapCount="1" lang="JSON" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\Data\NationsBotData.json" backupFilePath="" originalFileLastModifTimestamp="1236574976" originalFileLastModifTimestampHigh="30834044" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="1496" startPos="1874" endPos="1874" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\ConcertOfNationsTest.py" backupFilePath="" originalFileLastModifTimestamp="-2145917952" originalFileLastModifTimestampHigh="30833661" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="0" mapWrapIndentMode="-1" mapIsWrap="no">
                 <Fold line="13" />
                 <Fold line="41" />
                 <Fold line="88" />
@@ -382,7 +382,7 @@
                 <Fold line="350" />
                 <Fold line="362" />
             </File>
-            <File firstVisibleLine="4016" xOffset="0" scrollWidth="1552" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JSON" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\Savegames\Test - 0.json" backupFilePath="" originalFileLastModifTimestamp="-1337213440" originalFileLastModifTimestampHigh="30858389" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1141866496" mapWrapIndentMode="-1" mapIsWrap="no" />
+            <File firstVisibleLine="4016" xOffset="0" scrollWidth="1496" startPos="0" endPos="0" selMode="0" offset="0" wrapCount="1" lang="JSON" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\Savegames\Test - 0.json" backupFilePath="" originalFileLastModifTimestamp="-577136896" originalFileLastModifTimestampHigh="30858850" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1141866496" mapWrapIndentMode="-1" mapIsWrap="no" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="1896" startPos="95" endPos="95" selMode="0" offset="0" wrapCount="1" lang="Python" encoding="-1" userReadOnly="no" filename="D:\Programs\Python\ConcertOfNations\NationsBot\GameCommands\__init__.py" backupFilePath="" originalFileLastModifTimestamp="-743885056" originalFileLastModifTimestampHigh="30858185" mapFirstVisibleDisplayLine="-1" mapFirstVisibleDocLine="-1" mapLastVisibleDocLine="-1" mapNbLine="-1" mapHigherPos="-1" mapWidth="-1" mapHeight="-1" mapKByteInDoc="1143209984" mapWrapIndentMode="-1" mapIsWrap="no" />
         </mainView>
         <subView activeIndex="0" />
