@@ -7,3 +7,9 @@ def allBuildables(saveGame):
     return saveGame.getGameDict()["Game Objects"]["Buildings"]
 
 #Get the info for one buildable
+def buildableInfo(saveGame, buildableName):
+    gDict = saveGame.getGameDict()["Game Objects"]["Buildings"]
+    
+    if (buildableName in gDict): return gDict[buildableName]
+    
+    return False

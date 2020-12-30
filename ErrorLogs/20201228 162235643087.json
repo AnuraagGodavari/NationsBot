@@ -1,0 +1,20 @@
+{
+    "ctx": {
+        "Author ID": 246808378913849345,
+        "Server ID": 747926191541059717
+    },
+    "Error Time": "2020-12-28 16:22:35.643087",
+    "Exception": "Command raised an exception: KeyError: 'Maintenance Costs'",
+    "Stack Trace": [
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 85, in wrapped\n    ret = await coro(*args, **kwargs)\n",
+        "  File \"D:\\Programs\\Python\\ConcertOfNations\\NationsBot\\ConcertOfNationsCogs\\GameCogs.py\", line 379, in projects\n    for resource in buildable[\"buildingCosts\"][\"Maintenance Costs\"].keys():\n",
+        "KeyError: 'Maintenance Costs'\n",
+        "\nThe above exception was the direct cause of the following exception:\n\n",
+        "Traceback (most recent call last):\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\bot.py\", line 903, in invoke\n    await ctx.command.invoke(ctx)\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 855, in invoke\n    await injected(*ctx.args, **ctx.kwargs)\n",
+        "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 94, in wrapped\n    raise CommandInvokeError(exc) from exc\n",
+        "discord.ext.commands.errors.CommandInvokeError: Command raised an exception: KeyError: 'Maintenance Costs'\n"
+    ]
+}
