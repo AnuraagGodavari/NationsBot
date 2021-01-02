@@ -18,7 +18,7 @@
             "name": "TestA",
             "resources": {
                 "Money": 114674.0,
-                "Iron": 2,
+                "Iron": 6,
                 "Food": 0,
                 "Coal": 0,
                 "Steel": 0,
@@ -4423,7 +4423,8 @@
                         }
                     },
                     "territory": "Territory (30,28)",
-                    "morale": 100
+                    "morale": 100,
+                    "size": 10
                 },
                 "TestA Fleet 1": {
                     "__class__": "Fleet",
@@ -4749,15 +4750,15 @@
     "saveGameData": {
         "NationColors": {
             "TestA": [
-                147,
-                43,
-                147,
+                28,
+                36,
+                69,
                 255
             ],
             "TestB": [
-                201,
-                219,
-                226,
+                88,
+                105,
+                184,
                 255
             ]
         },

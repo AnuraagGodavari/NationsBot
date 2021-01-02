@@ -78,6 +78,7 @@ def makePages(listToPage, embedTitle, embedDesc, fieldNameList, fieldValueList):
     #if fieldNameList is: ["name", "|", "status" "," "territory"]
     #then the field's name will be f"{thingDict[name]} | {thingDict[status]} , {thingDict[territory]}"
     def strFromList(list, obj):
+        #Save the object to a dict for easy reading
         objDict = FileHandling.saveObject(obj)
         rtnStr = ''
         
@@ -92,10 +93,10 @@ def makePages(listToPage, embedTitle, embedDesc, fieldNameList, fieldValueList):
             if (thing in objDict.keys()):
                 if (omitFirstLabel or omitAllLabels): 
                     rtnStr += str(objDict[thing]) + " "
-                    
-                    if (omitFirstLabel): omitFirstLabel = False
+                    omitFirstLabel = False
                 
-                else: rtnStr += thing + ": " + str(objDict[thing]) + " "
+                #Add capitalized label plus the value
+                else: rtnStr += thing[0].upper() + thing[1:] + ": " + str(objDict[thing]) + " "
                 
             else:
                 rtnStr += thing + ' '
@@ -461,8 +462,45 @@ class NationsCog(commands.Cog):
     
     #Gets a list of demographics in the nation or in a territory
     @commands.command()
-    async def demographics(self, ctx, requiredArgs): #requiredArgs is a territory name or specific demographic
-        pass
+    async def demographics(self, ctx, *requiredArgs): #requiredArgs is a territory name or specific demographic
+        gameInfo = getGameInfo(ctx)
+        requiredArg = ' '.join(requiredArgs)
+        
+        #If this is a territory
+        if (requiredArg in gameInfo["Savegame"][gameInfo["Nation Name"]].territories.keys()):
+        
+            territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], requiredArg)
+            
+            pages = makePages(
+            list(territory.demographics.values()),
+            f"{requiredArg} Demographics",
+            "PopulationData and UnrestData are formatted like this: [Amount, Annual Growth]",
+            ["name"],
+            [">>> ", "populationData", '\n', "unrestData"])
+            
+            await ctx.send(embed = pages[0])
+            
+            if ("Stack" not in playerStatuses[str(ctx.author.id)]):
+                playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
+            
+            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.demographics:{requiredArg}", "Pages": pages, "Page": 0, "Territory": territory})
+        
+        #If we're already on a territory
+        elif ("Territory" in playerStatuses[str(ctx.author.id)]["Stack"].top.value):
+            territory = playerStatuses[str(ctx.author.id)]["Stack"].top.value["Territory"]
+            
+            #If this demographic exists in this territory
+            if (requiredArg in territory.demographics):
+                demographic = territory.demographics[requiredArg]
+                
+                newEmbed = discord.Embed(
+                    title = requiredArg + " Information",
+                    description = '"Territory" in playerStatuses[str(ctx.author.id)]["Stack"].top.value',
+                    color = discord.Color.blue()
+                )
+                await ctx.send(embed = newEmbed)
+            
+        else: await ctx.send(f"\"{requiredArg}\" cannot be found, please choose a Territory or Demographic")
     
     #Gets information of all armies or a specific army
     @commands.command()
@@ -500,7 +538,7 @@ class NationsCog(commands.Cog):
             f"Nation <{gameInfo['Nation Name']}> Armies",
             "_Type 'n.armies <pageNo>' or 'n.page <pageNo>' to go to a specific page, or n.armies <army name> to get an army's information._",
             ["name"],
-            ["size", "|", "location", "|", "status"])
+            ["size", "|", "territory", "|", "status"])
             
             await ctx.send(embed = pages[min(len(pages) - 1, max(0, int(optionalArg)))])
         
