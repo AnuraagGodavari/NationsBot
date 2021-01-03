@@ -1507,8 +1507,9 @@ class UnitGroup(GameObject):
 #A group of soldiers, cavalry and/or artillery
 class Army(UnitGroup):
     territoryTypes = ("LandTerritory")
-    def __init__(self, name, nation, composition, territory, status = "Active", morale = 100):
+    def __init__(self, name, nation, composition, territory, status = "Active", morale = 100, **extraDictData):
         UnitGroup.__init__(self, name, nation, composition, territory, status, morale)
+        self.size = self.getSize()
     
     #Different from UnitGroup.getSize, since it factors in division weights.
     def getSize(self):

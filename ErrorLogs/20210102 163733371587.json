@@ -3,19 +3,18 @@
         "Author ID": 246808378913849345,
         "Server ID": 747926191541059717
     },
-    "Error Time": "2020-12-26 14:29:37.123447",
-    "Exception": "Command raised an exception: KeyError: 0",
+    "Error Time": "2021-01-02 16:37:33.371587",
+    "Exception": "Command raised an exception: AttributeError: 'Territory' object has no attribute 'demographics'",
     "Stack Trace": [
         "Traceback (most recent call last):\n",
         "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 85, in wrapped\n    ret = await coro(*args, **kwargs)\n",
-        "  File \"D:\\Programs\\Python\\ConcertOfNations\\NationsBot\\ConcertOfNationsCogs\\GameCogs.py\", line 434, in fleets\n    fleet = NationController.getUnitGroup(gameInfo[\"Savegame\"], gameInfo[\"Nation Name\"], optionalArg)\n",
-        "  File \"D:\\Programs\\Python\\ConcertOfNations\\NationsBot\\NationController\\NationController.py\", line 50, in getUnitGroup\n    return saveGame[nationName].unitGroups[unitGroupName]\n",
-        "KeyError: 0\n",
+        "  File \"D:\\Programs\\Python\\ConcertOfNations\\NationsBot\\ConcertOfNationsCogs\\GameCogs.py\", line 475, in demographics\n    allDemographics = Util.combineDicts(allDemographics, territory.demographics)\n",
+        "AttributeError: 'Territory' object has no attribute 'demographics'\n",
         "\nThe above exception was the direct cause of the following exception:\n\n",
         "Traceback (most recent call last):\n",
         "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\bot.py\", line 903, in invoke\n    await ctx.command.invoke(ctx)\n",
         "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 855, in invoke\n    await injected(*ctx.args, **ctx.kwargs)\n",
         "  File \"C:\\Users\\anura\\AppData\\Local\\Programs\\Python\\Python37-32\\lib\\site-packages\\discord\\ext\\commands\\core.py\", line 94, in wrapped\n    raise CommandInvokeError(exc) from exc\n",
-        "discord.ext.commands.errors.CommandInvokeError: Command raised an exception: KeyError: 0\n"
+        "discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'Territory' object has no attribute 'demographics'\n"
     ]
 }
