@@ -462,19 +462,75 @@ class NationsCog(commands.Cog):
     
     #Gets a list of demographics in the nation or in a territory
     @commands.command()
-    async def demographics(self, ctx, *requiredArgs): #requiredArgs is a territory name or specific demographic
+    async def demographics(self, ctx, *optionalArgs): #requiredArgs is a territory name or specific demographic
         gameInfo = getGameInfo(ctx)
-        requiredArg = ' '.join(requiredArgs)
+        optionalArg = ' '.join(optionalArgs)
+        
+        #If optionalArg is not specified, get all of the demographic info for the nation
+        if not(optionalArg): 
+            allDemographics = {}
+            
+            #Add all national demographic totals
+            for territory in gameInfo["Savegame"][gameInfo["Nation Name"]].territories.values():
+                if (isinstance(territory, GameObjects.HabitableTerritory)):
+                    for demographic in territory.demographics.values():
+                        
+                        #If this demographic doesn't have an entry, add one
+                        if not(demographic.name in allDemographics.keys()):
+                            allDemographics[demographic.name] = {
+                                "Name": demographic.name,
+                                "Population": 0,
+                                "Population Growth Percentage": 0,
+                                "Population Growth": 0,
+                                "Average Unrest": 0,
+                                "Average Unrest Growth": 0,
+                                "Count": 0 #For calculating averages
+                            }
+                        
+                        allDemographics[demographic.name]["Population"] += demographic.populationData[0]
+                        allDemographics[demographic.name]["Population Growth Percentage"] += demographic.populationData[1]
+                        allDemographics[demographic.name]["Average Unrest"] += demographic.unrestData[0]
+                        allDemographics[demographic.name]["Average Unrest Growth"] += demographic.unrestData[1]
+                        allDemographics[demographic.name]["Count"] += 1
+            
+            #Get averages by dividing by count
+            for demographic in allDemographics:
+                count = allDemographics[demographic]["Count"]
+                
+                for key in ("Population", "Population Growth", "Average Unrest", "Average Unrest Growth"):
+                    
+                    #Get averages
+                    if (key in ("Population Growth", "Average Unrest", "Average Unrest Growth")): allDemographics[demographic][key] /= count
+                    
+                    #convert to int
+                    allDemographics[demographic][key] = int(allDemographics[demographic][key])
+                
+                #Get number of people added to the pop next year
+                allDemographics[demographic]["Population Growth"] = int(allDemographics[demographic]["Population Growth Percentage"] * allDemographics[demographic]["Population"])
+            
+            totalPop = sum(demo["Population"] for demo in allDemographics.values() if demo)
+            totalPopGrowth = int(sum(demo["Population Growth"] for demo in allDemographics.values() if demo))
+                    
+            pages = makePages(
+            list(allDemographics.values()),
+            f"{gameInfo['Nation Name']} Total Demographics",
+            f"Total Population is {totalPop} growing by {totalPopGrowth} people annually",
+            ["Name"],
+            [">>> ", "Population", '\n', "Population Growth", '\n', "Average Unrest", '\n', "Average Unrest Growth"])
+            
+            await ctx.send(embed = pages[0])
+            
+            pprint.pprint(allDemographics)
         
         #If this is a territory
-        if (requiredArg in gameInfo["Savegame"][gameInfo["Nation Name"]].territories.keys()):
+        elif (optionalArg in gameInfo["Savegame"][gameInfo["Nation Name"]].territories.keys()):
         
-            territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], requiredArg)
+            territory = NationController.getTerritory(gameInfo["Savegame"], gameInfo["Nation Name"], optionalArg)
             
             pages = makePages(
             list(territory.demographics.values()),
-            f"{requiredArg} Demographics",
-            "PopulationData and UnrestData are formatted like this: [Amount, Annual Growth]",
+            f"{optionalArg} Demographics",
+            "PopulationData and UnrestData are formatted like this: [Amount, Annual Growth %]",
             ["name"],
             [">>> ", "populationData", '\n', "unrestData"])
             
@@ -483,24 +539,33 @@ class NationsCog(commands.Cog):
             if ("Stack" not in playerStatuses[str(ctx.author.id)]):
                 playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
             
-            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.demographics:{requiredArg}", "Pages": pages, "Page": 0, "Territory": territory})
+            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.demographics:{optionalArg}", "Pages": pages, "Page": 0, "Territory": territory})
         
-        #If we're already on a territory
+        #If we're already on a territory, get the info for the specified demographic in this territory.
         elif ("Territory" in playerStatuses[str(ctx.author.id)]["Stack"].top.value):
             territory = playerStatuses[str(ctx.author.id)]["Stack"].top.value["Territory"]
             
             #If this demographic exists in this territory
-            if (requiredArg in territory.demographics):
-                demographic = territory.demographics[requiredArg]
+            if (optionalArg in territory.demographics):
+                demographic = territory.demographics[optionalArg]
                 
                 newEmbed = discord.Embed(
-                    title = requiredArg + " Information",
-                    description = '"Territory" in playerStatuses[str(ctx.author.id)]["Stack"].top.value',
+                    title = territory.name + " " + optionalArg + " Information",
+                    #description = f"",
                     color = discord.Color.blue()
                 )
+                
+                newEmbed.add_field(name = "**Population:**\n", 
+                    value = ">>> " + str(demographic.populationData[0]) + "\nGrowth: " + str(demographic.populationData[1] * 100) + f"% Annually ({int(demographic.populationData[0] * demographic.populationData[1])} next year)", 
+                    inline = False)
+                    
+                newEmbed.add_field(name = "**Unrest:**\n", 
+                    value = ">>> " + str(demographic.unrestData[0]) + "\nGrowth: " + str(demographic.unrestData[1] * 100) + f"% Annually ({demographic.unrestData[0] * demographic.unrestData[1]} next year)", 
+                    inline = False)
+                
                 await ctx.send(embed = newEmbed)
             
-        else: await ctx.send(f"\"{requiredArg}\" cannot be found, please choose a Territory or Demographic")
+        else: await ctx.send(f"\"{optionalArg}\" cannot be found, please choose a valid Territory or Demographic")
     
     #Gets information of all armies or a specific army
     @commands.command()
