@@ -150,7 +150,16 @@ class Map:
                         self[lesserVertex][greaterVertex] = (dist**0.5)*terrainModifier
     
     def toImage(self, filename = None, colorData = None, visibleVertices = None):
+    
         xMin = xMax = yMin = yMax = 0
+        
+        maxNameLen = 0
+        fontSize = 32
+        
+        closestVertDistX = False
+        
+        #Get min and max x and y coordinates of all the vertices
+        #Get the longest name and use that to calculate the map size multiplier as well
         for vertex in self.vertices.values():
             
             if vertex.coords[0] < xMin: xMin = vertex.coords[0]
@@ -159,11 +168,12 @@ class Map:
             if vertex.coords[1] < yMin: yMin = vertex.coords[1]
             elif vertex.coords[1] > yMax: yMax = vertex.coords[1]
             
-        #print(f"{xMin} {xMax} {yMin} {yMax}")
+            if (len(vertex.name) > maxNameLen): maxNameLen = len(vertex.name)
         
-        #printout = Image.new("RGBA", (max(xMin - xMax), max(yMin - yMax)))
-
-        map = Image.new("RGBA", ((xMax - xMin)*12, (yMax- yMin)*12), (210, 210, 210))
+        xSize = (xMax - xMin) * 12
+        ySize = (yMax- yMin) * 12
+        
+        map = Image.new("RGBA", (xSize, ySize), (210, 210, 210))
         mapDraw = ImageDraw.Draw(map)
         scale = min(xMax - xMin, yMax - yMin)
         
@@ -177,10 +187,17 @@ class Map:
                         continue
             
                 edge = self[edgeName]
-                mapDraw.line([((xMin + vertex.coords[0])*12, (yMin + vertex.coords[1])*12), ((xMin + edge.coords[0])*12, (yMin + edge.coords[1])*12)], fill = "black", width = int(scale/100))
+                mapDraw.line(
+                    [((xMin + vertex.coords[0])*12, #x0
+                    (yMin + vertex.coords[1])*12), #y0
+                    ((xMin + edge.coords[0])*12,  #x1
+                    (yMin + edge.coords[1])*12)], #y1
+                    fill = "grey", width = int(scale/100)
+                )
         
         radius = int(scale/15)
         
+        #Draw the territories and their labels on top
         for vertex in self.vertices.values():
             
             if (visibleVertices):
@@ -206,7 +223,7 @@ class Map:
             
             mapDraw.ellipse((xCoord - radius, yCoord - radius, xCoord + radius, yCoord + radius), fill = color, outline = outlineColor)
             
-            courierNew = ImageFont.truetype("Resources/courier.ttf", min(int(scale/10), 32))
+            courierNew = ImageFont.truetype("Resources/courier.ttf", min(int(scale/10), fontSize))
             mapDraw.text((xCoord, yCoord-(radius*1.5)), vertex.name, fill='black', font=courierNew)
             
         #mapDraw.ellipse((0, 0, 100, 100), outline = "black")

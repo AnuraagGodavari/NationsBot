@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import json, os, pprint, traceback, datetime
+from enum import Enum
 from GameCommands import *
 from ConcertOfNations import *
 
@@ -10,6 +11,7 @@ print("GameCogs.py GAME MASTER AND NATION COGS FOR CONCERT OF NATIONS BOT\n*****
 print("-----\nREMINDERS:\n")
 print("Make pages able to evaluate functions (use eval()?)!\n")
 print("Check out modifiers['Nation']['National'] and the like!")
+print("Do gameDict command for NationCog")
 print("-----\n")
 
 #A cache of saveGames being played.
@@ -146,8 +148,41 @@ class GameMasterCog(commands.Cog):
 
 #The cog that contains nation commands and events
 class NationsCog(commands.Cog):
+
+    class Flags(Enum):
+        INT = 1
+
     def __init__(self, client):
         self.client = client
+    
+    def validateArgs(self, args, varDict):
+        
+        #Create an empty dict with the keys in varDict to assign values to
+        rtnDict = {key: None for key in varDict.keys()}
+        
+        #String of one or more mini-args to create one full arg
+        argString = ""
+        
+        for arg in args:
+            if (argString != ""): argString += " "
+            argString += arg
+            
+            for var in rtnDict.keys():
+                #If the var isn't set
+                if (rtnDict[var] == None):
+                    #If the var is a number and the argString is a string of digits:
+                    if (varDict[var] == self.Flags.INT):
+                        if (argString.isdigit()):
+                            rtnDict[var] = int(argString)
+                            argString = ""
+                    
+                    #If the varDict value for this var key is a dict or list
+                    else:
+                        if (argString in varDict[var]):
+                            rtnDict[var] = argString
+                            argString = ""
+                            
+        return rtnDict
     
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
@@ -231,10 +266,43 @@ class NationsCog(commands.Cog):
         
         await ctx.send(f"Logged in to game: <{gameName}>")
     
+    #If the player is on a menu with multiple pages, this turns to the requested page number.
+    @commands.command()
+    async def page(self, ctx, pageNo):
+        if ("Stack" in playerStatuses[str(ctx.author.id)]):
+            stack = playerStatuses[str(ctx.author.id)]["Stack"]
+            
+            try:
+                if (int(pageNo) < len(stack.top.value["Pages"])):
+                    pageNo = min(len(stack.top.value["Pages"]), max(0, int(pageNo)))
+                    await ctx.send(embed = stack.top.value["Pages"][pageNo])
+                
+                else: 
+                    raise GameException(f"PAGE <{pageNo}> OUT OF BOUNDS (max is {len(stack.top.value['Pages']) - 1})")
+            
+            except: raise GameException(f"PAGE NUMBER IS INVALID (valid page numbers are between 0 and {len(stack.top.value['Pages']) - 1})")
+    
+    #Brings the player's menu progression back to the previous menu.
+    @commands.command()
+    async def back(self, ctx):
+        if ("Stack" in playerStatuses[str(ctx.author.id)]):
+            #Pop the top status (most recent menu)
+            popped = playerStatuses[str(ctx.author.id)]["Stack"].pop()
+            await ctx.send(f"_Leaving menu for {popped['State']}..._")
+            
+            #If there is still a top, show the display for top.
+            if (playerStatuses[str(ctx.author.id)]["Stack"].top):
+                newTop = playerStatuses[str(ctx.author.id)]["Stack"].top
+                
+                page = min(len(newTop.value["Pages"]), max(0, newTop.value["Page"]))
+                await ctx.send(embed = newTop.value["Pages"][page])
+    
     #Gets an entry from the game dictionary
     @commands.command()
     async def gameDict(self, ctx, key):
         return None
+    
+    '''INFORMATION COMMANDS'''
     
     #Main menu for national info
     @commands.command()
@@ -660,37 +728,25 @@ class NationsCog(commands.Cog):
             
             playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.fleets:{optionalArg}", "Pages": pages, "Page": optionalArg})
 
-    #If the player is on a menu with multiple pages, this turns to the requested page number.
-    @commands.command()
-    async def page(self, ctx, pageNo):
-        if ("Stack" in playerStatuses[str(ctx.author.id)]):
-            stack = playerStatuses[str(ctx.author.id)]["Stack"]
-            
-            try:
-                if (int(pageNo) < len(stack.top.value["Pages"])):
-                    pageNo = min(len(stack.top.value["Pages"]), max(0, int(pageNo)))
-                    await ctx.send(embed = stack.top.value["Pages"][pageNo])
-                
-                else: 
-                    raise GameException(f"PAGE <{pageNo}> OUT OF BOUNDS (max is {len(stack.top.value['Pages']) - 1})")
-            
-            except: raise GameException(f"PAGE NUMBER IS INVALID (valid page numbers are between 0 and {len(stack.top.value['Pages']) - 1})")
+    ''' GAMEPLAY COMMANDS '''
     
-    #Brings the player's menu progression back to the previous menu.
     @commands.command()
-    async def back(self, ctx):
-        if ("Stack" in playerStatuses[str(ctx.author.id)]):
-            #Pop the top status (most recent menu)
-            popped = playerStatuses[str(ctx.author.id)]["Stack"].pop()
-            await ctx.send(f"_Leaving menu for {popped['State']}..._")
-            
-            #If there is still a top, show the display for top.
-            if (playerStatuses[str(ctx.author.id)]["Stack"].top):
-                newTop = playerStatuses[str(ctx.author.id)]["Stack"].top
-                
-                page = min(len(newTop.value["Pages"]), max(0, newTop.value["Page"]))
-                await ctx.send(embed = newTop.value["Pages"][page])
+    async def trainArmy(self, ctx, *args):
     
+        gameInfo = getGameInfo(ctx)
+        saveGame = gameInfo["Savegame"]
+        nationName = gameInfo["Nation Name"]
+        
+        vars = self.validateArgs(args,
+            {
+            "size": self.Flags.INT,
+            "unit": gameInfo["Savegame"].getGameDict()["Game Objects"]["Divisions"],
+            "territory": NationController.allTerritories(gameInfo["Savegame"], gameInfo["Nation Name"])
+            }
+        )
+                
+        pprint.pprint(vars)
+
 def setup(client):
     client.add_cog(GameMasterCog(client))
     client.add_cog(NationsCog(client))
