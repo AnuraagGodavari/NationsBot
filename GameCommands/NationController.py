@@ -73,7 +73,7 @@ def fleetsInfo(saveGame, nationName):
 
 #Build a Unit Group
 def trainUnitGroup(saveGame, nation, forceType, unit, size, territory):
-    saveGame[nation].trainForce(forceType, unit, size, territory, saveGame)
+    return saveGame[nation].trainForce(forceType, unit, size, territory, saveGame)
     
 #Move a Unit Group
 def moveUnitGroup(saveGame, nation, unitGroup, destination):
@@ -109,8 +109,13 @@ def deleteUnitGroup(saveGame, nation, unitGroupToDelete):
 #----------
 
 #See Territories
-def allTerritories(saveGame, nationName):
-    return nationalInfo(saveGame, nationName)["Territories"]
+def allTerritories(saveGame, nationName = None):
+    if (nationName):
+        return nationalInfo(saveGame, nationName)["Territories"]
+
+#See all Territories that can be traversed by a nation
+def traversableTerritories(saveGame, nationName):
+    return saveGame.traversableTerritories(nation)
 
 #See Individual Territory Info
 def getTerritory(saveGame, nationName, territoryName):

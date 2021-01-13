@@ -268,8 +268,7 @@ class SaveGame:
             colorData[nation]["Territories"] = list(self[nation].territories.keys())
         
         if (nationToMap): 
-            
-            self.getMap().toImage(f"Nation_{nationToMap}_Game_{self.name}_Date_{str(self.date).replace('/', '_')}", colorData, self.knownTerritories(nation))
+            self.getMap().toImage(f"Nation_{nationToMap}_Game_{self.name}_Date_{str(self.date).replace('/', '_')}", colorData, self.knownTerritories(nationToMap))
             return f"Maps/Nation_{nationToMap}_Game_{self.name}_Date_{str(self.date).replace('/', '_')}.png"
         
         else:
@@ -282,7 +281,7 @@ class SaveGame:
         
         for territory in self.saveGameData["DiscoveredBy"]:
             if (nation in self.saveGameData["DiscoveredBy"][territory]): knownTerritories.append(territory)
-            
+        
         knownTerritories += list(self[nation].territories.keys())
         
         return knownTerritories
@@ -960,7 +959,11 @@ class Nation:
             
             category = blueprint["category"]
             self.bureaucracy[f"{category} Bureaucracy"][0] += blueprint["buildingCosts"]["size"]
-    
+            
+            return self.unitGroups[newName]
+        
+        else: return False #UnitGroup cannot be built
+        
     #Recruits a colonial expedition from a territory's population
     def recruitColonists(self, numColonists, territory, saveGame):
         #If the colonial bureaucracy has enough space

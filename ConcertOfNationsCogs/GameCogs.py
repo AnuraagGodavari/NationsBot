@@ -73,6 +73,9 @@ def getGameInfo(ctx):
     rtnDict["Nation Name"] = getNation(ctx, rtnDict["Savegame"])
     return rtnDict
 
+def getColor(gameInfo):
+    return discord.Color.from_rgb(153, 0, 0)
+
 #Makes an embed page
 def makePages(listToPage, embedTitle, embedDesc, fieldNameList, fieldValueList):
     
@@ -113,7 +116,7 @@ def makePages(listToPage, embedTitle, embedDesc, fieldNameList, fieldValueList):
         newEmbed = discord.Embed(
                 title = f"{embedTitle} || Page {pageNo}/{len(pagedList) - 1}",
                 description = f"{embedDesc}\n_Type 'n.page <pageNo>' to go to a specific page._",
-                color = discord.Color.blue()
+                color = discord.Color.from_rgb(153, 0, 0)
             )
             
         for obj in page:
@@ -155,6 +158,7 @@ class NationsCog(commands.Cog):
     def __init__(self, client):
         self.client = client
     
+    #Take a list of input args and assigns values to requested variables based on a varDict that specifes the conditions for the args to be validated
     def validateArgs(self, args, varDict):
         
         #Create an empty dict with the keys in varDict to assign values to
@@ -314,7 +318,7 @@ class NationsCog(commands.Cog):
         newEmbed = discord.Embed(
             title = f"Nation <{gameInfo['Nation Name']}> Main Menu",
             description = "_Type 'n.exit' to log out of this game at any time._",
-            color = discord.Color.blue()
+            color = discord.Color.from_rgb(153, 0, 0)
         )
         
         newEmbed.add_field(name = f"Military Forces and Expeditions ({len(nationalInfo['Forces'])}):", value = "Type n.armies, n.fleets or n.expeditions for more info", inline = False)
@@ -349,7 +353,7 @@ class NationsCog(commands.Cog):
             newEmbed = discord.Embed(
                     title = f"{optionalArg}",
                     description = f"Status: \"{territory.status}\"",
-                    color = discord.Color.blue()
+                    color = discord.Color.from_rgb(153, 0, 0)
                 )
             newEmbed.add_field(name = f"Projects: {len(territory.projects.keys())}", value = f"_Type n.projects {optionalArg} to view all projects_", inline = False)
             
@@ -401,7 +405,7 @@ class NationsCog(commands.Cog):
                 newEmbed = discord.Embed(
                         title = f"{optionalArg} Projects || Page {pageNo}/{len(pagedProjects) - 1}",
                         description = f"Status: \"{territory.status}\"\n_Type 'n.page <pageNo>' to go to a specific page._",
-                        color = discord.Color.blue()
+                        color = discord.Color.from_rgb(153, 0, 0)
                     )
                     
                 for project in page:
@@ -425,7 +429,7 @@ class NationsCog(commands.Cog):
                 newEmbed = discord.Embed(
                         title = optionalArg + " Information",
                         description = f"Size: {buildable['buildingCosts']['size']}, Category: {buildable['category']}, Build Time: {buildable['buildTime']}",
-                        color = discord.Color.blue()
+                        color = discord.Color.from_rgb(153, 0, 0)
                     )
                     
                 completionEffects = buildable["Completion Effects"]
@@ -509,7 +513,7 @@ class NationsCog(commands.Cog):
                 newEmbed = discord.Embed(
                         title = f"{optionalArg} Projects || Page {pageNo}/{len(pagedBuildables) - 1}",
                         description = f"All buildable projects\n_Type 'n.page <pageNo>' to go to a specific page._",
-                        color = discord.Color.blue()
+                        color = discord.Color.from_rgb(153, 0, 0)
                     )
                     
                 for project in page:
@@ -620,7 +624,7 @@ class NationsCog(commands.Cog):
                 newEmbed = discord.Embed(
                     title = territory.name + " " + optionalArg + " Information",
                     #description = f"",
-                    color = discord.Color.blue()
+                    color = discord.Color.from_rgb(153, 0, 0)
                 )
                 
                 newEmbed.add_field(name = "**Population:**\n", 
@@ -730,6 +734,7 @@ class NationsCog(commands.Cog):
 
     ''' GAMEPLAY COMMANDS '''
     
+    #Build a new Army
     @commands.command()
     async def trainArmy(self, ctx, *args):
     
@@ -744,8 +749,64 @@ class NationsCog(commands.Cog):
             "territory": NationController.allTerritories(gameInfo["Savegame"], gameInfo["Nation Name"])
             }
         )
-                
+        
+        newArmy = NationController.trainUnitGroup(gameInfo["Savegame"], gameInfo["Nation Name"], "Army", vars["unit"], vars["size"], vars["territory"])
+        
+        if (newArmy):
+            newEmbed = discord.Embed(
+                title = f"Building {vars['size']} {vars['unit']} in {vars['territory']}!",
+                description = f"Date of completion: {newArmy.status.split(':')[1]}",
+                color = discord.Color.red()
+            )
+            await ctx.send(embed = newEmbed)
+            
+        else: await ctx.send(f"Unable to build {vars['size']} {vars['unit']} in {vars['territory']}")
+
+    #Build a new Fleet
+    @commands.command()
+    async def trainFleet(self, ctx, *args):
+    
+        gameInfo = getGameInfo(ctx)
+        saveGame = gameInfo["Savegame"]
+        nationName = gameInfo["Nation Name"]
+        
+        vars = self.validateArgs(args,
+            {
+            "size": self.Flags.INT,
+            "unit": gameInfo["Savegame"].getGameDict()["Game Objects"]["Ships"],
+            "territory": NationController.allTerritories(gameInfo["Savegame"], gameInfo["Nation Name"])
+            }
+        )
+        
+        newArmy = NationController.trainUnitGroup(gameInfo["Savegame"], gameInfo["Nation Name"], "Fleet", vars["unit"], vars["size"], vars["territory"])
+        
+        if (newArmy):
+            newEmbed = discord.Embed(
+                title = f"Building {vars['size']} {vars['unit']} in {vars['territory']}!",
+                description = f"Date of completion: {newArmy.status.split(':')[1]}",
+                color = discord.Color.red()
+            )
+            await ctx.send(embed = newEmbed)
+            
+        else: await ctx.send(f"Unable to build {vars['size']} {vars['unit']} in {vars['territory']}")
+
+    #
+    @commands.command()
+    async def move(self, ctx, *args):
+        #saveGame, nation, unitGroup, destination
+        gameInfo = getGameInfo(ctx)
+        saveGame = gameInfo["Savegame"]
+        nationName = gameInfo["Nation Name"]
+        
+        vars = self.validateArgs(args,
+            {
+            "unitGroup": gameInfo["Savegame"][gameInfo["Nation Name"]].unitGroups.keys(),
+            "destination": NationController.traversableTerritories(gameInfo["Savegame"], gameInfo["Nation Name"])
+            }
+        )
+        
         pprint.pprint(vars)
+        
 
 def setup(client):
     client.add_cog(GameMasterCog(client))
