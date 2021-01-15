@@ -377,6 +377,10 @@ def testProcedure():
     testBuildingArmy(testGame, "TestA", "Army", "TestInfantry", 10, "Territory (30,28)")
 
     testAdvance(testGame, 120, 3)
+    
+    testBuildingArmy(testGame, "TestA", "Army", "TestCavalry", 1, "Territory (30,28)")
+
+    testAdvance(testGame, 120, 3)
 
     testBuildingArmy(testGame, "TestA", "Fleet", "TestLightShip", 1, "Territory (30,28)")
 

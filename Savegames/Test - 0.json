@@ -7,7 +7,7 @@
         "__class__": "Date",
         "__module__": "ConcertOfNations.GameObjects",
         "month": 1,
-        "year": 37
+        "year": 67
     },
     "map": "mapFromImage.json",
     "gameDict": "Test Dictionary.json",
@@ -17,8 +17,8 @@
             "__module__": "ConcertOfNations.GameObjects",
             "name": "TestA",
             "resources": {
-                "Money": 114674.0,
-                "Iron": 2,
+                "Money": 283336.0249999999,
+                "Iron": 8,
                 "Food": 0,
                 "Coal": 0,
                 "Steel": 0,
@@ -413,14 +413,14 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1294,
+                                1761,
                                 0.01
                             ],
                             "unrestData": [
                                 0,
                                 0
                             ],
-                            "recruitableRate": 0.18338298840561545
+                            "recruitableRate": 0.2020626241787051
                         }
                     }
                 },
@@ -497,7 +497,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -638,7 +638,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -724,7 +724,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -808,7 +808,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -892,7 +892,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1033,7 +1033,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1174,7 +1174,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1372,7 +1372,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1456,7 +1456,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1540,7 +1540,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1624,7 +1624,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1708,7 +1708,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1792,7 +1792,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1876,7 +1876,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -1960,7 +1960,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2044,7 +2044,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2128,7 +2128,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2212,7 +2212,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2353,7 +2353,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2437,7 +2437,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2521,7 +2521,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2605,7 +2605,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2689,7 +2689,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2773,7 +2773,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2857,7 +2857,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -2998,7 +2998,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3082,7 +3082,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3166,7 +3166,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3250,7 +3250,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3334,7 +3334,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3532,7 +3532,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3616,7 +3616,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3700,7 +3700,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3784,7 +3784,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3868,7 +3868,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -3952,7 +3952,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -4093,7 +4093,7 @@
                             "__module__": "ConcertOfNations.GameObjects",
                             "name": "Test Demographic 1",
                             "populationData": [
-                                1410,
+                                1883,
                                 0.01
                             ],
                             "unrestData": [
@@ -4426,6 +4426,31 @@
                     "morale": 100,
                     "size": 10
                 },
+                "TestA Army 2": {
+                    "__class__": "Army",
+                    "__module__": "ConcertOfNations.GameObjects",
+                    "name": "TestA Army 2",
+                    "status": "Active",
+                    "nation": "TestA",
+                    "composition": {
+                        "TestCavalry": {
+                            "__class__": "Division",
+                            "__module__": "ConcertOfNations.GameObjects",
+                            "name": "TestCavalry",
+                            "status": "Active",
+                            "unitType": "TestCavalry",
+                            "size": 1,
+                            "speed": 1250,
+                            "homeTerritory": "Territory (30,28)",
+                            "weight": 1,
+                            "attack": 1,
+                            "defense": 1
+                        }
+                    },
+                    "territory": "Territory (30,28)",
+                    "morale": 100,
+                    "size": 1
+                },
                 "TestA Fleet 1": {
                     "__class__": "Fleet",
                     "__module__": "ConcertOfNations.GameObjects",
@@ -4750,15 +4775,15 @@
     "saveGameData": {
         "NationColors": {
             "TestA": [
-                168,
-                157,
-                31,
+                231,
+                202,
+                71,
                 255
             ],
             "TestB": [
-                66,
-                94,
-                31,
+                170,
+                20,
+                243,
                 255
             ]
         },

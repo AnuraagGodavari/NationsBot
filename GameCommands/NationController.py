@@ -77,15 +77,22 @@ def trainUnitGroup(saveGame, nation, forceType, unit, size, territory):
     
 #Move a Unit Group
 def moveUnitGroup(saveGame, nation, unitGroup, destination):
-    saveGame[nation].unitGroups[unitGroup].moveTo(destination, saveGame)
+    return saveGame[nation].unitGroups[unitGroup].moveTo(destination, saveGame)
     
 #Combine Unit Groups
 def mergeUnitGroups(saveGame, nation, coreUnitGroup, *groupsToMerge):
     mergeWith = []
+    coreGroup = saveGame[nation].unitGroups[coreUnitGroup]
+    
     for group in groupsToMerge:
         mergeWith.append(saveGame[nation].unitGroups[group])
+        
+    for group in mergeWith:
+        if ((group.__class__ != coreGroup.__class__) or (group.territory != coreGroup.territory)):
+            return False
 
-    saveGame[nation].unitGroups[coreUnitGroup].merge(*mergeWith, saveGame)
+    coreGroup.merge(saveGame, *mergeWith)
+    return coreGroup
 
 #Split a Unit Group
 def splitUnitGroup(saveGame, nation, originalUnitGroup, *unitNames):
@@ -115,7 +122,7 @@ def allTerritories(saveGame, nationName = None):
 
 #See all Territories that can be traversed by a nation
 def traversableTerritories(saveGame, nationName):
-    return saveGame.traversableTerritories(nation)
+    return saveGame.traversableTerritories(nationName)
 
 #See Individual Territory Info
 def getTerritory(saveGame, nationName, territoryName):

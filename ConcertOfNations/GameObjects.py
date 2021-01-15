@@ -302,6 +302,8 @@ class SaveGame:
                             traversableTerritories.append(territory)
             
         traversableTerritories += list(self[nation].territories.keys())
+        
+        return traversableTerritories
     
     #Gets a list of all territories visible by a nation that it does not own.
     def visibleTerritories(self, nation):
@@ -1337,8 +1339,9 @@ class UnitGroup(GameObject):
                 previousTerr = currentTerr
             
             self.status = f"Moving:{pathStr}"
+            return self
         else:
-            print(f"MOVING \"{self.name}\" TO \"{destination}\" FAILED")
+            return False
     
     #Check if this unitGroup is moving and then move forward if it is.
     def checkMoving(self, saveGame):
@@ -1373,7 +1376,7 @@ class UnitGroup(GameObject):
             
             else: self.status = "Active"
     
-    def merge(self, *mergeWith, saveGame):
+    def merge(self, saveGame, *mergeWith):
         for otherGroup in mergeWith:
             for unit in otherGroup.composition.values():
                 #If this unit matches an existing one in the composition, combine them
@@ -2025,7 +2028,7 @@ class ColonialTerritory(HabitableTerritory):
         
         return FileHandling.loadObject(territoryDict)
 
-#A territory that is under the legal control of another nation but within the military presence of another. COMMENTED BECAUSE OF POSSIBLE INHERITANCE PROBLEMS
+#A territory that is under the legal control of another nation but within the military presence of another. #COMMENTED BECAUSE OF POSSIBLE INHERITANCE PROBLEMS
 #class OccupiedTerritory(Territory):
     #pass
         

@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import json, os, pprint, traceback, datetime
-from enum import Enum
+from enum import Enum, IntEnum
 from GameCommands import *
 from ConcertOfNations import *
 
@@ -152,20 +152,31 @@ class GameMasterCog(commands.Cog):
 #The cog that contains nation commands and events
 class NationsCog(commands.Cog):
 
-    class Flags(Enum):
+    class Flags(IntEnum):
         INT = 1
+        LIST = 2
 
     def __init__(self, client):
         self.client = client
     
     #Take a list of input args and assigns values to requested variables based on a varDict that specifes the conditions for the args to be validated
-    def validateArgs(self, args, varDict):
+    #noneAllowed is a bool where, if true, variables may have a value of none
+    def validateArgs(self, args, varDict, noneAllowed = False):
         
         #Create an empty dict with the keys in varDict to assign values to
         rtnDict = {key: None for key in varDict.keys()}
         
         #String of one or more mini-args to create one full arg
         argString = ""
+        
+        #If the LIST flag is a key in rtnDict, replace it with the variables needed for the list.
+        if (int(self.Flags.LIST) in varDict):
+            listVars = varDict.pop(int(self.Flags.LIST))
+            rtnDict.pop(int(self.Flags.LIST))
+            
+            for var in listVars:
+                varDict[var] = listVars[var]
+                rtnDict[var] = list()
         
         for arg in args:
             if (argString != ""): argString += " "
@@ -181,10 +192,29 @@ class NationsCog(commands.Cog):
                             argString = ""
                     
                     #If the varDict value for this var key is a dict or list
-                    else:
+                    else: 
                         if (argString in varDict[var]):
                             rtnDict[var] = argString
                             argString = ""
+                
+                #If this var is an empty list
+                elif(rtnDict[var] == []):
+                    
+                    unfilledVars = [ var for var in rtnDict.keys() if rtnDict[var] == None]
+                    #If all vars are filled, and if the argString fits
+                    if ((unfilledVars == []) and (argString in varDict[var])):
+                        rtnDict[var].append(argString)
+                        argString = ""
+                        
+        #If None isn't allowed for a variable value
+        if (not noneAllowed):
+            noneVars = []
+        
+            for var in rtnDict:
+                if rtnDict[var] == None:
+                    noneVars.append(var)
+                    
+            if (noneVars): raise GameException(f"VARIABLES <{str(noneVars)}> NOT ASSIGNED PROPERLY\n{json.dumps(rtnDict, indent = 4)}")
                             
         return rtnDict
     
@@ -790,7 +820,7 @@ class NationsCog(commands.Cog):
             
         else: await ctx.send(f"Unable to build {vars['size']} {vars['unit']} in {vars['territory']}")
 
-    #
+    #Move a unit group from its current location to another territory.
     @commands.command()
     async def move(self, ctx, *args):
         #saveGame, nation, unitGroup, destination
@@ -805,8 +835,71 @@ class NationsCog(commands.Cog):
             }
         )
         
-        pprint.pprint(vars)
+        moved = NationController.moveUnitGroup(saveGame, nationName, vars['unitGroup'], vars['destination'])
         
+        if (moved != False):
+            
+            #movement status looks like: "Moving:Territory;Date>>Territory;Date>>..Territory;Date>>
+            terrList = moved.status.split(':')[1]
+            pathStr = ">>> "
+            for pathNode in terrList.split('>>')[0:-1]:
+                nodeData = pathNode.split(';')
+                pathStr += nodeData[0] + ": Arrive on " + nodeData[1] + '\n'
+            
+            newEmbed = discord.Embed(
+                title = f"Moving {vars['unitGroup']} to {vars['destination']}!",
+                color = discord.Color.red()
+            )
+            
+            newEmbed.add_field(name = "Starting from:", value = moved.territory, inline = False)
+            newEmbed.add_field(name = "Path:", value = pathStr, inline = False)
+            
+            await ctx.send(embed = newEmbed)
+        
+        else: await ctx.send(f"Unable to move {vars['unitGroup']} to {vars['destination']}")
+            
+    #Merge multiple unit groups of the same class (e.g. "Army", "Fleet", etc)
+    @commands.command()
+    async def merge(self, ctx, *args):
+        gameInfo = getGameInfo(ctx)
+        saveGame = gameInfo["Savegame"]
+        nationName = gameInfo["Nation Name"]
+        
+        vars = self.validateArgs(args,
+            {
+            "coreUnitGroup": gameInfo["Savegame"][gameInfo["Nation Name"]].unitGroups.keys(),
+            int(self.Flags.LIST): {
+                "groupsToMerge": gameInfo["Savegame"][gameInfo["Nation Name"]].unitGroups.keys()
+                }
+            }
+        )
+        
+        merged = NationController.mergeUnitGroups(saveGame, nationName, vars['coreUnitGroup'], *vars['groupsToMerge'])
+        
+        if (merged):
+            newEmbed = discord.Embed(
+                title = f"Successfully merged {vars['groupsToMerge']} into {vars['coreUnitGroup']}!",
+                color = discord.Color.red()
+            )
+            
+            await ctx.send(embed = newEmbed)
+            
+            #Show the new army information
+            pages = makePages(
+            list(merged.composition.values()),
+            vars['coreUnitGroup'],
+            f"Location: {merged.territory}, Status: \"{merged.status}\"",
+            ["name", "status"],
+            ["OMIT_ALL_LABELS", "unitType", "|", "size", "|", "homeTerritory"])
+            
+            await ctx.send(embed = pages[0])
+            
+            if ("Stack" not in playerStatuses[str(ctx.author.id)]):
+                playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
+            
+            playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.merge:{vars['coreUnitGroup']}", "Pages": pages, "Page": 0})
+            
+        else: await ctx.send(f"Unable to merge {vars['coreUnitGroup']} with {vars['groupsToMerge']}")
 
 def setup(client):
     client.add_cog(GameMasterCog(client))
