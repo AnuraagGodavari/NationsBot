@@ -901,6 +901,29 @@ class NationsCog(commands.Cog):
             
         else: await ctx.send(f"Unable to merge {vars['coreUnitGroup']} with {vars['groupsToMerge']}")
 
+    #Merge multiple unit groups of the same class (e.g. "Army", "Fleet", etc)
+    @commands.command()
+    async def toggleMobilization(self, ctx, *args):
+        
+        gameInfo = getGameInfo(ctx)
+        
+        vars = self.validateArgs(args,
+            {
+            "unitGroup": gameInfo["Savegame"][gameInfo["Nation Name"]].unitGroups.keys(),
+            }
+        )
+        
+        NationController.toggleMobilization(gameInfo["Savegame"], gameInfo["Nation Name"], vars['unitGroup'])
+        
+        newStatus = gameInfo['Savegame'][gameInfo['Nation Name']].unitGroups[vars['unitGroup']].status
+        
+        #If the unitGroup's status is a countdown, reformat it for readability
+        if ("Turns" in newStatus): 
+            splitStatus = newStatus.split(':')
+            newStatus = splitStatus[0] + " in " + splitStatus[1]
+        
+        await ctx.send(f"{vars['unitGroup']}'s status is now {newStatus}")
+
 def setup(client):
     client.add_cog(GameMasterCog(client))
     client.add_cog(NationsCog(client))

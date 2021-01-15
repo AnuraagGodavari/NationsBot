@@ -1241,8 +1241,8 @@ class GameObject:
         return self
     
     #Changes the status to a countdown timer
-    def addCountdown(self, countdownName, numTurns):
-        if (self.isActive()):
+    def addCountdown(self, countdownName, numTurns, reactivating = False):
+        if (self.isActive() or reactivating):
             self.status = f"{countdownName}:{numTurns} Turns"
         return self
     
@@ -1289,7 +1289,7 @@ class GameObject:
     
     #Sets the project to be re-enabled on the next turn
     def enable(self):
-        self.addCountdown("Re-enabling", 1)
+        self.addCountdown("Re-enabling", 1, True)
     
     def getData(self, gameDict):
         return gameDict["Game Objects"][f"{self.__class__.__name__}s"][self.name].copy()
@@ -1477,7 +1477,7 @@ class UnitGroup(GameObject):
         return totalCost
 
     def enable(self):
-        self.addCountdown("Remobilizing", 1)
+        self.addCountdown("Remobilizing", 1, True)
 
     def demobilize(self, saveGame, nation):
         self.status = "Demobilized"

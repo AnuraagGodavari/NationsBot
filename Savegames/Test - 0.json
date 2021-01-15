@@ -18,7 +18,7 @@
             "name": "TestA",
             "resources": {
                 "Money": 283336.0249999999,
-                "Iron": 8,
+                "Iron": 4,
                 "Food": 0,
                 "Coal": 0,
                 "Steel": 0,
@@ -4775,15 +4775,15 @@
     "saveGameData": {
         "NationColors": {
             "TestA": [
-                231,
-                202,
-                71,
+                221,
+                61,
+                38,
                 255
             ],
             "TestB": [
-                170,
-                20,
-                243,
+                232,
+                53,
+                72,
                 255
             ]
         },
