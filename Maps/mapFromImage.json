@@ -128,7 +128,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 1
+                    "Iron": 3
                 },
                 "Coastal": true
             }
@@ -156,7 +156,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 2
                 },
                 "Coastal": true
             }
@@ -202,7 +202,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 2
+                    "Iron": 3
                 },
                 "Coastal": true
             }
@@ -251,7 +251,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 2
+                    "Iron": 3
                 },
                 "Coastal": true
             }
@@ -275,7 +275,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 2
+                    "Iron": 1
                 },
                 "Coastal": true
             }
@@ -324,7 +324,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 2
                 },
                 "Coastal": true
             }
@@ -370,7 +370,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 3
+                    "Iron": 4
                 },
                 "Coastal": true
             }
@@ -433,7 +433,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 1
                 },
                 "Coastal": true
             }
@@ -482,7 +482,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 1
+                    "Iron": 2
                 },
                 "Coastal": true
             }
@@ -534,7 +534,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 1
+                    "Iron": 4
                 },
                 "Coastal": true
             }
@@ -560,7 +560,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 2
                 },
                 "Coastal": true
             }
@@ -588,7 +588,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 3
+                    "Iron": 4
                 },
                 "Coastal": true
             }
@@ -689,7 +689,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 3
+                    "Iron": 4
                 },
                 "Coastal": true
             }
@@ -738,7 +738,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 3
+                    "Iron": 1
                 },
                 "Coastal": true
             }
@@ -789,7 +789,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 2
+                    "Iron": 1
                 },
                 "Coastal": true
             }
@@ -840,7 +840,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 3
                 },
                 "Coastal": true
             }
@@ -895,7 +895,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 2
+                    "Iron": 4
                 },
                 "Coastal": true
             }
@@ -970,7 +970,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 1
                 },
                 "Coastal": true
             }
@@ -1001,7 +1001,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 1
+                    "Iron": 3
                 },
                 "Coastal": true
             }
@@ -1025,7 +1025,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 1
+                    "Iron": 4
                 },
                 "Coastal": true
             }
@@ -1054,7 +1054,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 3
+                    "Iron": 2
                 },
                 "Coastal": true
             }
@@ -1131,7 +1131,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 3
                 },
                 "Coastal": true
             }
@@ -1214,7 +1214,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 1
                 },
                 "Coastal": true
             }
@@ -1242,7 +1242,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 3
+                    "Iron": 2
                 },
                 "Coastal": true
             }
@@ -1271,7 +1271,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 3
+                    "Iron": 4
                 },
                 "Coastal": true
             }
@@ -1325,7 +1325,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 1
+                    "Iron": 3
                 },
                 "Coastal": true
             }
@@ -1353,7 +1353,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 4
+                    "Iron": 3
                 },
                 "Coastal": true
             }
@@ -1378,7 +1378,7 @@
                 "type": "LandTerritory",
                 "terrain": "Flat",
                 "resources": {
-                    "Iron": 3
+                    "Iron": 2
                 },
                 "Coastal": true
             }

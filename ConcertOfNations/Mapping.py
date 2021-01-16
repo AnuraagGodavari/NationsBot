@@ -437,7 +437,8 @@ def mapFromImage(imageName):
     #imgMap.traversalToImage("Territory (40,48)", "Territory (39,36)")
     
     with open("Maps/mapFromImage.json", 'w') as f: #Saves the SaveGame to a new file
-        json.dump(FileHandling.saveObject(imgMap), f, indent = 4)
+        mapDict = FileHandling.saveObject(imgMap)
+        json.dump(mapDict, f, indent = 4)
 
 '''testMap = Map()
 

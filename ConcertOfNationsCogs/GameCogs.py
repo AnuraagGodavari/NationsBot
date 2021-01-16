@@ -157,8 +157,10 @@ class NationsCog(commands.Cog):
         ARGS = 0
         
         ANY = 1
-        INT = 2
-        LIST = 3
+        ALL = 2
+        
+        INT = 3
+        LIST = 4
 
     def __init__(self, client):
         self.client = client
@@ -169,6 +171,9 @@ class NationsCog(commands.Cog):
         
         #Create an empty dict with the keys in varDict to assign values to
         rtnDict = {key: None for key in varDict.keys()}
+        
+        #flag to stop the arg-interpreting loop
+        stopFlag = False
         
         #String of one or more mini-args to create one full arg
         argString = ""
@@ -182,30 +187,48 @@ class NationsCog(commands.Cog):
                 varDict[var] = listVars[var]
                 rtnDict[var] = list()
         
-        for arg in args:
+        for index in range(len(args)):
+         
+            if (stopFlag): break
+            
+            arg = args[index]
+            
             if (argString != ""): argString += " "
             argString += arg
             
             for var in rtnDict.keys():
                 #If the var isn't set
                 if (rtnDict[var] == None):
+                
                     #If the var is a number and the argString is a string of digits:
                     if (varDict[var] == self.Flags.INT):
                         if (argString.isdigit()):
                             rtnDict[var] = int(argString)
                             argString = ""
+                            break
                     
-                    #If the varDict value for this var key is a dict or list
-                    else: 
+                    #If the varDict value for this var key is a non-string iterable
+                    elif (hasattr(varDict[var], '__iter__') and not isinstance(varDict[var], str)): 
                         if (argString in varDict[var]):
                             rtnDict[var] = argString
                             argString = ""
-                
+                            break
+                    
+                    #If the last args are to be combined as one
+                    elif (varDict[var] == self.Flags.ALL):
+                        unfilledVars = [ var for var in rtnDict.keys() if rtnDict[var] == None]
+                        
+                        #If all other vars are filled, and if the argString fits
+                        if (unfilledVars == []):
+                            rtnDict[var] = argString + " " + ' '.join(args[index + 1:])
+                            stopFlag = True
+                            break
+                        
                 #If this var is an empty list
                 elif(rtnDict[var] == []):
                     
                     unfilledVars = [ var for var in rtnDict.keys() if rtnDict[var] == None]
-                    #If all vars are filled, and if the argString fits
+                    #If all other vars are filled
                     if (unfilledVars == []):
                         
                         #If the object is a non-string iterable, check using "in"
@@ -305,7 +328,7 @@ class NationsCog(commands.Cog):
         
         if (str(ctx.author.id) in playerStatuses):
             playerStatus = playerStatuses[str(ctx.author.id)]
-            
+            pprint.pprint(playerStatus)
             if ("Stack" in playerStatus):
                 plate = playerStatus["Stack"].top
                 
@@ -1025,7 +1048,25 @@ class NationsCog(commands.Cog):
     #Split a unit into different units
     @commands.command()
     async def splitUnits(self, ctx, *args):
-        pass
+    
+        '''gameInfo = getGameInfo(ctx)
+        saveGame = gameInfo["Savegame"]
+        nationName = gameInfo["Nation Name"]
+        
+        vars = self.validateArg(args,
+            {"unitGroup": gameInfo["Savegame"][gameInfo["Nation Name"]].unitGroups}
+        )
+            
+        unitGroup = vars["unitGroup"]
+        args = vars[int(self.Flags.ARGS)]
+        
+        vars = self.validateArgs(args,
+            {
+            "unitToSplit": unitGroup.composition,
+            "numToSplitOff": self.Flags.INT,
+            "newUnitName": self.Flags.ALL
+            }
+        )'''
 
 def setup(client):
     client.add_cog(GameMasterCog(client))

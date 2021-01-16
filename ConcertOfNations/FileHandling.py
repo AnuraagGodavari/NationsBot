@@ -45,8 +45,11 @@ def loadObject(thing):
     return thing
 
 #d = saveObject(getNation(608117738183065641, None, 608113391747465227))
-def saveObject(thing): #recursively turns a custom object, with object parameters and subparameters, into a dictionary
+def saveObject(originalThing): #recursively turns a custom object, with object parameters and subparameters, into a dictionary
 #used to be: def saveObject(thing, keys = None): 
+
+    thing = copy.deepcopy(originalThing)
+    
     rtnDict = {}
     try:
         rtnDict = toDict(thing)
@@ -75,15 +78,15 @@ def saveObject(thing): #recursively turns a custom object, with object parameter
     return rtnDict
 
 def toDict(thing): #Turns object into dict for json
-  
-  rtnDict = { #metadata for the dictionary
+
+    rtnDict = { #metadata for the dictionary
     "__class__": thing.__class__.__name__,
-   "__module__": thing.__module__
-  }
-  
-  rtnDict.update(thing.__dict__) #converts object parameters to a dict, combines with current dict
-  
-  return rtnDict
+    "__module__": thing.__module__
+    }
+
+    rtnDict.update(thing.__dict__) #converts object parameters to a dict, combines with current dict
+
+    return rtnDict
 
 def toObject(thing): #Turns dict from json into object
 
