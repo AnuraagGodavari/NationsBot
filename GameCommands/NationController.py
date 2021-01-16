@@ -96,7 +96,7 @@ def mergeUnitGroups(saveGame, nation, coreUnitGroup, *groupsToMerge):
 
 #Split a Unit Group
 def splitUnitGroup(saveGame, nation, originalUnitGroup, *unitNames):
-    saveGame[nation].unitGroups[originalUnitGroup].split(*unitNames, nation, saveGame)
+    return saveGame[nation].unitGroups[originalUnitGroup].split(nation, saveGame, *unitNames)
 
 #Mobilize/Demobilize a Unit Group
 def toggleMobilization(saveGame, nation, unitGroupName):

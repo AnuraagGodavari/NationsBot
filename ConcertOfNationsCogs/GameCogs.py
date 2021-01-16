@@ -153,8 +153,12 @@ class GameMasterCog(commands.Cog):
 class NationsCog(commands.Cog):
 
     class Flags(IntEnum):
-        INT = 1
-        LIST = 2
+    
+        ARGS = 0
+        
+        ANY = 1
+        INT = 2
+        LIST = 3
 
     def __init__(self, client):
         self.client = client
@@ -202,9 +206,19 @@ class NationsCog(commands.Cog):
                     
                     unfilledVars = [ var for var in rtnDict.keys() if rtnDict[var] == None]
                     #If all vars are filled, and if the argString fits
-                    if ((unfilledVars == []) and (argString in varDict[var])):
-                        rtnDict[var].append(argString)
-                        argString = ""
+                    if (unfilledVars == []):
+                        
+                        #If the object is a non-string iterable, check using "in"
+                        if (hasattr(varDict[var], '__iter__') and not isinstance(varDict[var], str)):
+                            
+                            if (argString in varDict[var]):
+                                
+                                rtnDict[var].append(argString)
+                                argString = ""
+                                
+                        elif (varDict[var] == self.Flags.ANY):
+                            rtnDict[var].append(argString)
+                            argString = ""
                         
         #If None isn't allowed for a variable value
         if (not noneAllowed):
@@ -218,6 +232,53 @@ class NationsCog(commands.Cog):
                             
         return rtnDict
     
+    #Validate only one arg
+    def validateArg(self, args, varDict):
+    
+        rtnDict = {key: None for key in varDict.keys()}
+        
+        argString = ""
+        
+        for index in range(len(args)):
+            
+            arg = args[index]
+            
+            if (argString != ""): argString += " "
+            argString += arg
+
+            for var in rtnDict.keys():
+                #If the var isn't set
+                if (rtnDict[var] == None):
+                    #If the var is a number and the argString is a string of digits:
+                    if (varDict[var] == self.Flags.INT):
+                        if (argString.isdigit()):
+                            rtnDict[var] = int(argString)
+                            argString = ""
+                    
+                    #If the varDict value for the var is a dict or list
+                    else: 
+                        if (argString in varDict[var]):
+                        
+                            rtnDict[var] = varDict[var].get(argString)
+                            
+                            if (index + 1 < len(args)):
+                                rtnDict[int(self.Flags.ARGS)] = args[index + 1:]
+                            
+                            return rtnDict
+        
+        #Check if the var is none
+        noneVars = []
+        
+        for var in rtnDict:
+            if rtnDict[var] == None:
+                noneVars.append(var)
+                
+        if (noneVars): raise GameException(f"VARIABLE <{str(noneVars)}> NOT ASSIGNED PROPERLY\n{json.dumps(rtnDict, indent = 4)}")
+        
+        #Continue as normal if the var is filled
+        rtnDict[int(self.Flags.ARGS)] = args
+        return rtnDict
+       
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
         errorTime = str(datetime.datetime.now())
@@ -762,7 +823,7 @@ class NationsCog(commands.Cog):
             
             playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.fleets:{optionalArg}", "Pages": pages, "Page": optionalArg})
 
-    ''' GAMEPLAY COMMANDS '''
+    ''' MILITARY GAMEPLAY COMMANDS '''
     
     #Build a new Army
     @commands.command()
@@ -877,17 +938,11 @@ class NationsCog(commands.Cog):
         merged = NationController.mergeUnitGroups(saveGame, nationName, vars['coreUnitGroup'], *vars['groupsToMerge'])
         
         if (merged):
-            newEmbed = discord.Embed(
-                title = f"Successfully merged {vars['groupsToMerge']} into {vars['coreUnitGroup']}!",
-                color = discord.Color.red()
-            )
-            
-            await ctx.send(embed = newEmbed)
             
             #Show the new army information
             pages = makePages(
             list(merged.composition.values()),
-            vars['coreUnitGroup'],
+            f"Merged {vars['groupsToMerge']} into {vars['coreUnitGroup']}",
             f"Location: {merged.territory}, Status: \"{merged.status}\"",
             ["name", "status"],
             ["OMIT_ALL_LABELS", "unitType", "|", "size", "|", "homeTerritory"])
@@ -923,12 +978,95 @@ class NationsCog(commands.Cog):
             newStatus = splitStatus[0] + " in " + splitStatus[1]
         
         await ctx.send(f"{vars['unitGroup']}'s status is now {newStatus}")
+        
+    #Split an army by units
+    @commands.command()
+    async def split(self, ctx, *args):
+    
+        gameInfo = getGameInfo(ctx)
+        saveGame = gameInfo["Savegame"]
+        nationName = gameInfo["Nation Name"]
+        
+        vars = self.validateArg(args,
+            {"unitGroup": gameInfo["Savegame"][gameInfo["Nation Name"]].unitGroups}
+        )
+            
+        unitGroup = vars["unitGroup"]
+        args = vars[int(self.Flags.ARGS)]
+        
+        vars = self.validateArgs(args,
+            {
+            int(self.Flags.LIST):
+                {
+                "unitsToSplit": unitGroup.composition
+                }
+            }
+        )
+        
+        splitArmies = NationController.splitUnitGroup(saveGame, nationName, unitGroup.name, *vars['unitsToSplit'])
+        
+        pages = makePages(
+        splitArmies,
+        f"Newly Split Forces",
+        "_Type the appropriate commands (i.e. n.<command> <force name> to get an force's information._",
+        ["name"],
+        ["size", "|", "territory", "|", "status"])
+        
+        await ctx.send(embed = pages[0])
+    
+        #Not adding this to stack because its simply result confirmation
+        ''' 
+        if ("Stack" not in playerStatuses[str(ctx.author.id)]):
+            playerStatuses[str(ctx.author.id)]["Stack"] = Util.Stack()
+        
+        playerStatuses[str(ctx.author.id)]["Stack"].push({"State": f"n.armies:{optionalArg}", "Pages": pages, "Page": optionalArg})
+        '''
+    
+    #Split a unit into different units
+    @commands.command()
+    async def splitUnits(self, ctx, *args):
+        pass
 
 def setup(client):
     client.add_cog(GameMasterCog(client))
     client.add_cog(NationsCog(client))
 
 #Bottom
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

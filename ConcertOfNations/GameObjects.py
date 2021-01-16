@@ -1385,22 +1385,30 @@ class UnitGroup(GameObject):
                 #Otherwise, make a new unit for it
                 else:
                     self.composition[unit.name] = unit
+            
+            #Get rid of the other group
+            saveGame[self.nation].unitGroups.pop(otherGroup.name)
                     
-    def split(self, *unitNames, nation, saveGame):
+    def split(self, nation, saveGame, *unitNames):
         splitComp = {}
         for unitName in unitNames:
-            if (unitName in self.composition.keys()):
+            if (unitName in self.composition):
                 splitComp[unitName] = self.composition.pop(unitName)
         
         groupBlueprint = {
-            "__class__": self.__class___.__name__,
+            "__class__": self.__class__.__name__,
             "__module__": "ConcertOfNations.GameObjects",
-            "name": saveGame[nation].getNewForceName(self.__class___.__name__),
+            "name": saveGame[nation].getNewForceName(self.__class__.__name__),
             "composition": splitComp,
-            "territory": territory
+            "territory": self.territory,
+            "nation": self.nation
         }
         
-        saveGame[nation].unitGroups[groupBlueprint["name"]] = FileHandling.loadObject(groupBlueprint)
+        newArmy = FileHandling.loadObject(groupBlueprint)
+        
+        saveGame[nation].unitGroups[groupBlueprint["name"]] = newArmy
+        
+        return (self, newArmy)
     
     def getSize(self):
         size = 0
